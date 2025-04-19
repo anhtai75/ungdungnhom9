@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- Nút quay lại ở góc trên bên trái -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back" />
+
+    <!-- Tiêu đề bên phải nút quay lại -->
+    <TextView
+        android:id="@+id/noteTitle"
+        android:text="Danh sách ghi chú"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/backButton"
+        android:layout_alignTop="@id/backButton"
+        android:layout_marginStart="12dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView nằm bên dưới tiêu đề -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_border"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:contentDescription="Danh sách ghi chú" />
+
+</RelativeLayout>

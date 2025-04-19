@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">  <!-- Cho phép mục có thể nhận focus -->
+
+    <!-- Title of the note -->
+<TextView
+android:id="@+id/noteTitle"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textSize="18sp"
+android:textColor="#000000"
+android:paddingBottom="6dp"
+android:textStyle="bold"
+    android:maxLines="1"
+    android:ellipsize="end"
+    />
+
+    <!-- Content of the note -->
+<TextView
+android:id="@+id/noteContent"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textSize="14sp"
+android:textColor="#555555"
+android:maxLines="3"
+    android:ellipsize="end"
+    />
+    </LinearLayout>

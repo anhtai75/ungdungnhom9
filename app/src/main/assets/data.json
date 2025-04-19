@@ -1,0 +1,101 @@
+[
+  {
+    "tenBenh": "Đột quỵ",
+    "chiTiet": {
+      "trieuChung": "Mất cân bằng cơ thể, khó nói, tê liệt một bên cơ thể, đau đầu đột ngột.",
+      "viecNenLam": "Gọi cấp cứu ngay lập tức, không để nạn nhân di chuyển.",
+      "viecKhongNenLam": "Không cho nạn nhân ăn hoặc uống gì trong khi chờ cấp cứu.",
+      "cachXuLy": "Đi cấp cứu gấp và bắt đầu điều trị theo chỉ định bác sĩ."
+    }
+  },
+  {
+    "tenBenh": "Đau dạ dày",
+    "chiTiet": {
+      "trieuChung": "Đau bụng vùng thượng vị, buồn nôn, ợ hơi, đầy bụng.",
+      "viecNenLam": "Ăn uống đúng giờ, tránh đồ chua cay, dùng thuốc kháng acid hoặc kháng sinh theo chỉ định.",
+      "viecKhongNenLam": "Không ăn đồ chua cay, không uống rượu bia.",
+      "cachXuLy": "Nếu tình trạng kéo dài, cần đi khám bác sĩ để được chẩn đoán và điều trị kịp thời."
+    }
+  },
+  {
+    "tenBenh": "Sốt siêu vi",
+    "chiTiet": {
+      "trieuChung": "Sốt cao, mệt mỏi, đau cơ, đau đầu, sổ mũi.",
+      "viecNenLam": "Nghỉ ngơi, uống nhiều nước, dùng thuốc hạ sốt.",
+      "viecKhongNenLam": "Không tự ý dùng kháng sinh.",
+      "cachXuLy": "Nghỉ ngơi và nếu cần, đến bác sĩ để kiểm tra và điều trị."
+    }
+  },
+  {
+    "tenBenh": "Táo bón",
+    "chiTiet": {
+      "trieuChung": "Đi tiêu khó khăn, phân khô cứng, ít hơn 3 lần/tuần.",
+      "viecNenLam": "Tăng cường rau xanh, uống đủ nước, vận động nhẹ nhàng.",
+      "viecKhongNenLam": "Không nhịn tiểu hoặc ăn thực phẩm cứng khó tiêu.",
+      "cachXuLy": "Dùng thuốc nhuận tràng nếu cần và tăng cường chế độ ăn uống hợp lý."
+    }
+  },
+  {
+    "tenBenh": "Viêm kết mạc (đau mắt đỏ)",
+    "chiTiet": {
+      "trieuChung": "Mắt đỏ, ngứa, chảy nước mắt, dử nhiều.",
+      "viecNenLam": "Giữ vệ sinh mắt, tránh dụi mắt, nhỏ nước muối sinh lý.",
+      "viecKhongNenLam": "Không tiếp xúc với nước bẩn, không dụi mắt.",
+      "cachXuLy": "Đi khám bác sĩ nếu tình trạng không thuyên giảm."
+    }
+  },
+  {
+    "tenBenh": "Viêm xoang",
+    "chiTiet": {
+      "trieuChung": "Đau đầu, nghẹt mũi, chảy dịch mũi vàng hoặc xanh, giảm khứu giác.",
+      "viecNenLam": "Rửa mũi bằng nước muối, dùng thuốc xịt mũi, kháng sinh nếu có vi khuẩn.",
+      "viecKhongNenLam": "Không hít thuốc lá, không tiếp xúc với môi trường ô nhiễm.",
+      "cachXuLy": "Đi khám bác sĩ để được kê thuốc điều trị."
+    }
+  },
+  {
+    "tenBenh": "Cảm cúm",
+    "chiTiet": {
+      "trieuChung": "Sốt, đau họng, ho, mệt mỏi, đau cơ, chảy nước mũi.",
+      "viecNenLam": "Nghỉ ngơi, uống nhiều nước, dùng thuốc hạ sốt, vitamin C.",
+      "viecKhongNenLam": "Không uống rượu hoặc thuốc lá, không để cơ thể bị lạnh.",
+      "cachXuLy": "Đi khám bác sĩ nếu có dấu hiệu viêm phổi hoặc tình trạng không cải thiện."
+    }
+  },
+  {
+    "tenBenh": "Ho gà",
+    "chiTiet": {
+      "trieuChung": "Ho khan, khó thở, nôn sau khi ho, có thể ho thành cơn.",
+      "viecNenLam": "Điều trị kháng sinh nếu được chỉ định, uống thuốc ho.",
+      "viecKhongNenLam": "Không tự ý dùng thuốc ho không kê đơn.",
+      "cachXuLy": "Đi khám bác sĩ để được điều trị kháng sinh hoặc tiêm phòng nếu chưa tiêm."
+    }
+  },
+  {
+    "tenBenh": "Cao huyết áp",
+    "chiTiet": {
+      "trieuChung": "Đau đầu, chóng mặt, buồn nôn, mệt mỏi, thở khò khè.",
+      "viecNenLam": "Duy trì chế độ ăn ít muối, tập thể dục đều đặn, kiểm tra huyết áp thường xuyên.",
+      "viecKhongNenLam": "Không uống rượu, không hút thuốc, không ăn thực phẩm chứa nhiều muối.",
+      "cachXuLy": "Đi khám bác sĩ để điều chỉnh thuốc huyết áp nếu cần."
+    }
+  },
+  {
+    "tenBenh": "Dị ứng thức ăn",
+    "chiTiet": {
+      "trieuChung": "Mẩn ngứa, sưng môi, sưng mắt, khó thở, chóng mặt.",
+      "viecNenLam": "Ngừng ăn ngay lập tức thức ăn gây dị ứng, dùng thuốc kháng histamin.",
+      "viecKhongNenLam": "Không tiếp tục ăn thức ăn gây dị ứng.",
+      "cachXuLy": "Gọi cấp cứu nếu có dấu hiệu khó thở hoặc sốc phản vệ."
+    }
+  },
+  {
+    "tenBenh": "Bệnh tiểu đường",
+    "chiTiet": {
+      "trieuChung": "Khát nước liên tục, đi tiểu nhiều, mệt mỏi, nhìn mờ.",
+      "viecNenLam": "Kiểm soát chế độ ăn uống, theo dõi đường huyết thường xuyên.",
+      "viecKhongNenLam": "Không bỏ qua thuốc điều trị, không ăn thực phẩm có đường hoặc carbohydrate cao.",
+      "cachXuLy": "Đi khám bác sĩ để theo dõi và điều trị kịp thời."
+    }
+  }
+]

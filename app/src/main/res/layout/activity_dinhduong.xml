@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="0dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nutrition"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="#7ED648"
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:gravity="center" />
+
+    <!-- Tìm kiếm -->
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_diets"
+        android:layout_below="@id/textViewHeader"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp" />
+
+    <!-- Danh sách chế độ ăn -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDiets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/editTextSearch"
+        android:layout_above="@id/footerLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/recycler_view_diets" />
+
+    <!-- Footer chứa 2 button -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#7ED648"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonRecipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/recipes"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/buttonTrackNutrition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/track_nutrition"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Nút thêm -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:layout_above="@id/footerLayout"
+        android:contentDescription="@string/add_diet"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#7ED648"
+        app:tint="#FFFFFF" />
+
+</RelativeLayout>

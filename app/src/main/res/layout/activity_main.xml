@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Thông báo + Lời nhắc -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notification"
+                    android:contentDescription="Thông báo"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/summaryTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Lời nhắc sức khỏe..."
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Thanh tìm kiếm -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tìm kiếm bài viết..."
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"
+                android:background="@drawable/search_background" />
+
+            <!-- Lịch -->
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="286dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/calendar_background" />
+
+            <!-- Ghi chú -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/noteEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint=" Nhập ghi chú..."
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:text="Lưu ghi chú"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:background="@drawable/button_background"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/viewNotesIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Xem danh sách ghi chú"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_notes" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Danh sách bài viết -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/articleRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/recycler_view_background"
+                android:contentDescription="Danh sách bài viết" />
+
+            <!-- FrameLayout để chứa Fragment nếu cần -->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+    <!-- Thanh điều hướng cố định bên dưới -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/nav_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="Profile"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_profile" />
+
+        <ImageView
+            android:id="@+id/nav_hospital"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="Hospital"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hospital" />
+
+        <ImageView
+            android:id="@+id/nav_nutrition_knowledge"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="Kiến thức dinh dưỡng"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_favorite" />
+
+        <ImageView
+            android:id="@+id/dinhduong_icon"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dinhduong" />
+
+        <ImageView
+            android:id="@+id/navSettings"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="Settings"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_settings" />
+    </LinearLayout>
+</RelativeLayout>

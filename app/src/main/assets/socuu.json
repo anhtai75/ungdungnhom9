@@ -1,0 +1,92 @@
+[
+  {
+    "tenBenh": "Côn trùng cắn",
+    "chiTiet": {
+      "trieuChung": "Sưng, đỏ, ngứa tại chỗ bị cắn.\nTrong trường hợp nghiêm trọng: khó thở, chóng mặt, sưng môi/mắt.",
+      "viecNenLam": "Rửa sạch vùng da bằng xà phòng và nước.\nChườm lạnh để giảm sưng.\nDùng thuốc kháng histamin nếu ngứa nhiều.",
+      "viecKhongNenLam": "Không gãi hoặc cào mạnh gây trầy xước da.\nKhông tự ý lấy kim chích nếu dị vật nằm sâu dưới da.",
+      "cachXuLy": "Nếu có dấu hiệu sốc phản vệ (khó thở, sưng môi, ngất), gọi cấp cứu ngay."
+    }
+  },
+  {
+    "tenBenh": "Ngất xỉu",
+    "chiTiet": {
+      "trieuChung": "Mất ý thức tạm thời, da tái nhợt, mạch yếu, thở chậm.",
+      "viecNenLam": "Đặt nạn nhân nằm ngửa, nâng chân cao.\nNới lỏng quần áo.\nĐảm bảo thông thoáng không khí.",
+      "viecKhongNenLam": "Không để nạn nhân ngồi dậy quá nhanh.\nKhông đổ nước lên mặt nạn nhân.",
+      "cachXuLy": "Nếu không tỉnh lại sau vài phút, gọi cấp cứu."
+    }
+  },
+  {
+    "tenBenh": "Bỏng nhiệt",
+    "chiTiet": {
+      "trieuChung": "Da đỏ, rộp, đau rát.",
+      "viecNenLam": "Làm mát vùng bỏng bằng nước mát trong 10-20 phút.\nBăng vết thương bằng gạc sạch.",
+      "viecKhongNenLam": "Không chọc vỡ bóng nước.\nKhông bôi kem hoặc dầu lên vết bỏng.",
+      "cachXuLy": "Nếu bỏng nặng, đến cơ sở y tế gần nhất."
+    }
+  },
+  {
+    "tenBenh": "Chảy máu mũi",
+    "chiTiet": {
+      "trieuChung": "Máu chảy ra từ một hoặc cả hai lỗ mũi.",
+      "viecNenLam": "Ngồi thẳng và cúi đầu nhẹ về phía trước.\nBóp nhẹ phần mềm của mũi trong 10 phút.",
+      "viecKhongNenLam": "Không ngửa đầu ra sau.\nKhông nằm ngửa.",
+      "cachXuLy": "Nếu không ngừng sau 20 phút, đến cơ sở y tế."
+    }
+  },
+  {
+    "tenBenh": "Hóc dị vật",
+    "chiTiet": {
+      "trieuChung": "Khó thở, ho dữ dội, không thể nói chuyện.",
+      "viecNenLam": "Khuyến khích ho mạnh nếu còn thở được.\nThực hiện Heimlich nếu không thở được.",
+      "viecKhongNenLam": "Không vỗ lưng khi nạn nhân đang ho mạnh.",
+      "cachXuLy": "Nếu không hiệu quả, gọi cấp cứu ngay."
+    }
+  },
+  {
+    "tenBenh": "Co giật",
+    "chiTiet": {
+      "trieuChung": "Toàn thân rung lắc không kiểm soát, mất ý thức.",
+      "viecNenLam": "Đặt người bệnh nằm nghiêng.\nGiữ khoảng trống quanh họ.\nGhi nhớ thời gian co giật.",
+      "viecKhongNenLam": "Không cố gắng giữ người bệnh lại.\nKhông đặt vật gì vào miệng.",
+      "cachXuLy": "Nếu co giật >5 phút, gọi cấp cứu."
+    }
+  },
+  {
+    "tenBenh": "Gãy xương",
+    "chiTiet": {
+      "trieuChung": "Sưng, đau, biến dạng chi thể, không cử động được.",
+      "viecNenLam": "Cố định phần xương bị gãy.\nChườm lạnh để giảm sưng.",
+      "viecKhongNenLam": "Không cố nắn lại xương.\nKhông cử động vùng bị thương.",
+      "cachXuLy": "Đưa đến bệnh viện để xử lý chuyên sâu."
+    }
+  },
+  {
+    "tenBenh": "Động kinh",
+    "chiTiet": {
+      "trieuChung": "Mất ý thức, co giật, sùi bọt mép.",
+      "viecNenLam": "Đặt người bệnh nằm nghiêng an toàn.\nBảo vệ đầu.\nGhi thời gian cơn động kinh.",
+      "viecKhongNenLam": "Không cố giữ người bệnh.\nKhông để vật cứng vào miệng.",
+      "cachXuLy": "Gọi cấp cứu nếu co giật kéo dài >5 phút."
+    }
+  },
+  {
+    "tenBenh": "Đuối nước",
+    "chiTiet": {
+      "trieuChung": "Bất tỉnh, da tím tái, không thở.",
+      "viecNenLam": "Gọi cấp cứu ngay.\nTiến hành hô hấp nhân tạo (CPR) nếu cần.",
+      "viecKhongNenLam": "Không lắc mạnh người bị đuối nước.\nKhông trì hoãn gọi cứu hộ.",
+      "cachXuLy": "Tiếp tục CPR đến khi có người hỗ trợ hoặc nạn nhân thở lại."
+    }
+  },
+  {
+    "tenBenh": "Ngộ độc thực phẩm",
+    "chiTiet": {
+      "trieuChung": "Buồn nôn, tiêu chảy, đau bụng, sốt nhẹ.",
+      "viecNenLam": "Uống nhiều nước để tránh mất nước.\nNghỉ ngơi.\nĂn thực phẩm dễ tiêu.",
+      "viecKhongNenLam": "Không tự ý dùng thuốc cầm tiêu chảy nếu không rõ nguyên nhân.",
+      "cachXuLy": "Nếu triệu chứng nặng, đến cơ sở y tế."
+    }
+  }
+]

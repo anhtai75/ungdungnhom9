@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F1F1F1"/> <!-- Màu nền sáng cho thanh tìm kiếm -->
+    <corners android:radius="16dp"/> <!-- Bo góc cho thanh tìm kiếm -->
+    <stroke android:color="#4CAF50" android:width="2dp"/> <!-- Đường viền màu xanh -->
+</shape>

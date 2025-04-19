@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F4F4F4">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chế độ dinh dưỡng"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#7ED648"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Các nút chế độ dinh dưỡng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <!-- Nút Giảm cân -->
+        <Button
+            android:id="@+id/btnDietWeightLoss"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Giảm cân"
+            android:textColor="#FFFFFF"
+            android:background="#FF5722"
+        android:layout_marginBottom="16dp"/>
+
+        <!-- Nút Tăng cơ -->
+        <Button
+            android:id="@+id/btnDietMuscleGain"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Tăng cơ"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+        android:layout_marginBottom="16dp"/>
+
+        <!-- Nút Duy trì -->
+        <Button
+            android:id="@+id/btnDietMaintain"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Duy trì"
+            android:textColor="#FFFFFF"
+            android:background="#4CAF50"
+        android:layout_marginBottom="16dp"/>
+
+        <!-- Nút Low Carb -->
+        <Button
+            android:id="@+id/btnDietLowCarb"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Low Carb"
+            android:textColor="#FFFFFF"
+            android:background="#AFA868"
+        android:layout_marginBottom="16dp"/>
+
+        <!-- Nút Keto -->
+        <Button
+            android:id="@+id/btnDietKeto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Keto"
+            android:textColor="#FFFFFF"
+            android:background="#9C27B0"
+        android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <!-- Hiển thị thông tin dinh dưỡng -->
+    <TextView
+        android:id="@+id/textViewNutritionInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Nút quay lại -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Quay lại"
+        android:textColor="#FFFFFF"
+        android:background="#8BC34A"
+    android:layout_marginTop="24dp"/>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".socuuActivity">
+
+    <!-- Tiêu đề bệnh -->
+    <TextView
+        android:id="@+id/diseaseTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="KIẾN THỨC SƠ CỨU KHẨN CẤP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1D6B1E"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nút quay lại, di chuyển sang bên phải -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        app:layout_constraintTop_toBottomOf="@id/diseaseTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView châm ngôn sống về sức khoẻ -->
+    <TextView
+        android:id="@+id/healthQuote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="“Sức khỏe là vốn quý nhất của con người. Hãy trân trọng và chăm sóc nó mỗi ngày.”"
+        android:textColor="#115615"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
+
+    <!-- CardView chứa thông tin bệnh -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/diseaseCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/healthQuote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView danh sách bệnh -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Danh sách các loại bệnh"
+        app:layout_constraintTop_toBottomOf="@+id/diseaseCard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_disease" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

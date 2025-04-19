@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_like"
+        android:icon="@drawable/ic_favorite_border"
+        android:title="Thích"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="Chia sẻ"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_favorite_list"
+        android:icon="@drawable/ic_list"
+        android:title="Danh sách yêu thích"
+        app:showAsAction="never" />
+
+
+
+</menu>

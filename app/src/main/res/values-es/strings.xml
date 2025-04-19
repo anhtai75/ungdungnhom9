@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc_search_bar">Barra de búsqueda</string>
+    <string name="desc_notification_icon">Icono de notificación</string>
+    <string name="desc_step_icon">Icono de paso</string>
+    <string name="desc_increment_step">Botón de incremento de paso</string>
+    <string name="desc_calendar">Calendario</string>
+    <string name="desc_nav_home">Inicio</string>
+    <string name="desc_nav_profile">Perfil</string>
+    <string name="desc_nav_settings">Configuración</string>
+    <string name="app_name">Mi aplicación</string>
+    <string name="language_option">Seleccionar idioma</string>
+    <string name="font_size">Tamaño de fuente</string>
+    <string name="back_button">Atrás</string>
+    <string name="emergency_title">EMERGENCIA</string>
+    <string name="emergency_header">EMERGENCIA</string>
+    <string name="emergency_notes_title">NOTAS PARA LLAMADAS DE EMERGENCIA</string>
+    <string name="emergency_note_1">Llamada gratuita, incluso sin saldo</string>
+    <string name="emergency_note_2">Siga las instrucciones del operador</string>
+    <string name="emergency_note_3">Observe y proporcione información sobre la ubicación del accidente, el estado de la víctima y el número de contacto de la persona en el lugar hasta que llegue la ambulancia</string>
+    <string name="hospital_title">HOSPITALES CERCANOS</string>
+    <string name="map_subtitle">Mapa</string>
+    <string name="contact_title">CONTACTO</string>
+    <string name="emergency_number">Números de emergencia</string>
+    <string name="change_language">Cambiar idioma</string>
+
+    <string name="nutrition">Nutrition</string>
+    <string name="search_diets">Search diets...</string>
+    <string name="recipes">Recipes</string>
+    <string name="track_nutrition">Track Nutrition</string>
+    <string name="add_new_diet">Add New Diet</string>
+    <string name="diet_name">Diet Name</string>
+    <string name="enter_diet_name">Enter diet name</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="allergies">Allergies</string>
+    <string name="gluten">Gluten</string>
+    <string name="dairy">Dairy</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="diet_details">Diet Details</string>
+    <string name="allergies_details">Allergies: %1$s</string>
+    <string name="suggested_recipes">Suggested Recipes</string>
+    <string name="sample_meal_plan">Sample Meal Plan</string>
+    <string name="tips">Tips</string>
+    <string name="favorite">Favorite</string>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="share">Share</string>
+    <string name="back">Back</string>
+    <string name="error_required_fields">Please fill all required fields</string>
+    <string name="recipe_salad">Vegetable salad with chicken breast</string>
+    <string name="recipe_salmon">Grilled salmon with asparagus</string>
+    <string name="recipe_eggs">Fried eggs with avocado</string>
+    <string name="recipe_pork">Grilled pork ribs with garlic butter sauce</string>
+    <string name="calories">Calories</string>
+    <string name="carbs">Carbs</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Fat</string>
+    <string name="add_diet">Add Diet</string>
+    <string name="recycler_view_diets">List of available diets</string>
+
+</resources>
