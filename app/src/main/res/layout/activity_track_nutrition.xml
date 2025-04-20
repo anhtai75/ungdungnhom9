@@ -93,7 +93,7 @@
         android:id="@+id/buttonBack"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:text="Quay lại"
+        android:text="@string/come_back"
         android:textColor="#FFFFFF"
         android:background="#8BC34A"
     android:layout_marginTop="24dp"/>

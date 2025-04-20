@@ -36,6 +36,6 @@
         android:background="@drawable/rounded_border"
         android:padding="8dp"
         android:clipToPadding="false"
-        android:contentDescription="Danh sách ghi chú" />
+        android:contentDescription="@string/content_discription" />
 
 </RelativeLayout>

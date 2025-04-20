@@ -23,7 +23,7 @@
             android:id="@+id/articleTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tiêu đề"
+            android:text="@string/post_title"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
             android:id="@+id/articleDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mô tả bài viết"
+            android:text="@string/description_post"
             android:textSize="14sp"
             android:textColor="#757575"
             android:layout_marginTop="4dp" />

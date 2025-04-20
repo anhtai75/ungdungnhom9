@@ -9,6 +9,6 @@
         android:id="@+id/searchResultsTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kết quả tìm kiếm sẽ được hiển thị ở đây"
+        android:text="@string/search_result"
         android:textSize="18sp"/>
 </LinearLayout>

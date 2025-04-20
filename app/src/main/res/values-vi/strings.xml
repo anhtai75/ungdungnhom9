@@ -24,6 +24,7 @@
     <string name="emergency_number">Số khẩn cấp</string>
     <string name="change_language">Thay đổi ngôn ngữ</string>
 
+
     <string name="nutrition">Dinh dưỡng</string>
     <string name="search_diets">Tìm kiếm chế độ ăn...</string>
     <string name="recipes">Công thức</string>
@@ -73,5 +74,15 @@
     <string name="noti">🔔 Thông báo</string>
     <string name="dark_mode">🌙 Chế độ tối</string>
     <string name="display_settings">⚙️ Cài đặt hiển thị</string>
+    <string name="come_back">Quay lại</string>
+    <string name="emergency_contact">Liên Hệ Khẩn Cấp\n</string>
+    <string name="police">Cảnh sát</string>
+    <string name="fire">Cứu hỏa</string>
+    <string name="car">Cấp cứu</string>
+    <string name="add_contacto">➕ Thêm liên hệ</string>
+    <string name="post_title">Tiêu đề</string>
+    <string name="description_post">Mô tả bài viết</string>
+    <string name="content_discription">Danh sách ghi chú</string>
+    <string name="search_result">Kết quả tìm kiếm sẽ được hiển thị ở đây</string>
 
 </resources>

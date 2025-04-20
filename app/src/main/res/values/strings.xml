@@ -73,6 +73,17 @@
         <string name="noti">🔔 Notifications</string>
         <string name="dark_mode">🌙 Dark Mode</string>
         <string name="display_settings">⚙️ Display Settings</string>
+        <string name="come_back">Back</string>
+        <string name="emergency_contact">Emergency Contact\n</string>
+        <string name="police">Police</string>
+        <string name="fire">Fire Fighter</string>
+        <string name="car">Ambulance</string>
+        <string name="add_contacto">➕ Add contact</string>
+
+        <string name="post_title">Post title</string>
+        <string name="description_post">Article description</string>
+        <string name="content_discription">Danh sách ghi chú</string>
+        <string name="search_result">Kết quả tìm kiếm sẽ được hiển thị ở đây</string>
 
 
 </resources>
