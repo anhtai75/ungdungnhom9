@@ -18,17 +18,18 @@ public class MyApplication extends Application {
 
         // Lấy ngôn ngữ đã lưu từ SharedPreferences
         SharedPreferences prefs = getSharedPreferences("AppSettings", MODE_PRIVATE);
-        String language = prefs.getString("language", "en"); // Mặc định là tiếng Anh
+        String language = prefs.getString("language", "vi"); // Mặc định là tiếng Việt
 
         // Áp dụng ngôn ngữ
         LocaleHelper.setLocale(this, language);
+
     }
 
     @Override
     protected void attachBaseContext(Context base) {
         // Lấy ngôn ngữ đã lưu
         SharedPreferences prefs = base.getSharedPreferences("AppSettings", MODE_PRIVATE);
-        String language = prefs.getString("language", "en");
+        String language = prefs.getString("language", "vi");
 
         // Áp dụng ngôn ngữ vào context
         super.attachBaseContext(updateBaseContextLocale(base, language));

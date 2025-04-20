@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends SettingsActivity {
 
     private EditText searchBar, noteEditText;
     private ImageView notificationIcon, navHome, navProfile, navSettings, viewNotesIcon, navHospital;

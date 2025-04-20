@@ -45,7 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
         fontSizeSeekBar.setProgress(savedFontSize);
         fontSizeTextView.setText("Font Size: " + savedFontSize);
 
-        int savedLanguageId = prefs.getInt("languageId", R.id.englishRadioButton);
+        int savedLanguageId = prefs.getInt("languageId", R.id.vietnameseRadioButton);
         languageGroup.check(savedLanguageId);
 
         // Kiểm tra và áp dụng chế độ tối khi bắt đầu
