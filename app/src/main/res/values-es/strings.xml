@@ -23,6 +23,8 @@
     <string name="contact_title">CONTACTO</string>
     <string name="emergency_number">Números de emergencia</string>
     <string name="change_language">Cambiar idioma</string>
+    <string name="search_hospital">Buscar un hospital...</string>
+    <string name="near">Más cercano</string>
 
     <string name="nutrition">Nutrición</string>
     <string name="search_diets">Buscar dietas...</string>
@@ -85,6 +87,8 @@
     <string name="description_post">Descripción del artículo</string>
     <string name="content_discription">Lista de notas</string>
     <string name="search_result">Los resultados de búsqueda se mostrarán aquí</string>
+    <string name="big_hospital">Central hospital</string>
+    <string name="small_hospital">Otros hospitales</string>
 
 
 </resources>

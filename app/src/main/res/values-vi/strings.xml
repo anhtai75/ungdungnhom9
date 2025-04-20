@@ -84,5 +84,9 @@
     <string name="description_post">Mô tả bài viết</string>
     <string name="content_discription">Danh sách ghi chú</string>
     <string name="search_result">Kết quả tìm kiếm sẽ được hiển thị ở đây</string>
+    <string name="search_hospital">Tìm kiếm bệnh viện...</string>
+    <string name="near">Gần nhất</string>
+    <string name="big_hospital">Bệnh viện lớn</string>
+    <string name="small_hospital">Bệnh viện khác</string>
 
 </resources>

@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:hint="Tìm kiếm bệnh viện..."
+                    android:hint="@string/search_hospital"
                     android:inputType="text"
                     android:padding="8dp"
                     android:textSize="15sp" />
@@ -85,7 +85,7 @@
             android:enabled="false"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="Gần nhất"
+            android:text="@string/near"
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
     </LinearLayout>
@@ -117,7 +117,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bệnh viện lớn"
+                android:text="@string/big_hospital"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -137,7 +137,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bệnh viện khác"
+                android:text="@string/small_hospital"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -156,7 +156,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gần nhất"
+                android:text="@string/near"
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
