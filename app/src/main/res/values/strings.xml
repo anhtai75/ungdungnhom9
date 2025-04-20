@@ -60,5 +60,20 @@
         <string name="add_diet">Add Diet</string>
         <string name="recycler_view_diets">List of available diets</string>
 
-    </resources>
+        <string name="name_disease">Disease Name</string>
+        <string name="detail">Details</string>
+        <string name="pick_language">🌐 Select language</string>
+        <string name="nutrition_plan">Nutrition plan</string>
+        <string name="button_nutrion1">Weight loss</string>
+        <string name="button_nutrion_2">Muscle gain</string>
+        <string name="button_nutrion_3">Maintain diet</string>
+
+        <string name="font_size_info">🔠 Text size: 14sp</string>
+        <string name="sound">🔊 Sound</string>
+        <string name="noti">🔔 Notifications</string>
+        <string name="dark_mode">🌙 Dark Mode</string>
+        <string name="display_settings">⚙️ Display Settings</string>
+
+
+</resources>
 

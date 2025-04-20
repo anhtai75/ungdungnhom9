@@ -95,10 +95,13 @@ public class SettingsActivity extends AppCompatActivity {
                 lang = "es";  // Đặt mã ngôn ngữ cho tiếng Tây Ban Nha
             }
 
+            // Lưu mã ngôn ngữ
+            editor.putString("language", lang).apply();
             // Cập nhật ngôn ngữ của ứng dụng ngay lập tức
             LocaleHelper.setLocale(SettingsActivity.this, lang);
             Toast.makeText(this, "Ngôn ngữ đã thay đổi: " + lang, Toast.LENGTH_SHORT).show();
-            recreate(); // Thực hiện tái tạo lại activity để cập nhật ngôn ngữ
+            finish();
+            startActivity(getIntent());
         });
 
         // Nút quay lại

@@ -39,13 +39,13 @@
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium"
                 android:textColor="#405D1F"
-                android:text="Tên bệnh" />
+                android:text="@string/name_disease" />
 
             <Button
                 android:id="@+id/huong_dan_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chi tiết"
+                android:text="@string/detail"
                 android:textAllCaps="false"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="#03A9F4"

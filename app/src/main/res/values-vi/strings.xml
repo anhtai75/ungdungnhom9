@@ -24,6 +24,54 @@
     <string name="emergency_number">Số khẩn cấp</string>
     <string name="change_language">Thay đổi ngôn ngữ</string>
 
+    <string name="nutrition">Dinh dưỡng</string>
+    <string name="search_diets">Tìm kiếm chế độ ăn...</string>
+    <string name="recipes">Công thức</string>
+    <string name="track_nutrition">Theo dõi dinh dưỡng</string>
+    <string name="add_new_diet">Thêm chế độ ăn mới</string>
+    <string name="diet_name">Tên chế độ ăn</string>
+    <string name="enter_diet_name">Nhập tên chế độ ăn</string>
+    <string name="description">Mô tả</string>
+    <string name="enter_description">Nhập mô tả</string>
+    <string name="allergies">Dị ứng</string>
+    <string name="gluten">Gluten</string>
+    <string name="dairy">Sản phẩm từ sữa</string>
+    <string name="peanuts">Đậu phộng</string>
+    <string name="save">Lưu</string>
+    <string name="cancel">Hủy</string>
+    <string name="diet_details">Chi tiết chế độ ăn</string>
+    <string name="allergies_details">Dị ứng: %1$s</string>
+    <string name="suggested_recipes">Công thức gợi ý</string>
+    <string name="sample_meal_plan">Thực đơn mẫu</string>
+    <string name="tips">Mẹo</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="unfavorite">Bỏ yêu thích</string>
+    <string name="share">Chia sẻ</string>
+    <string name="back">Quay lại</string>
+    <string name="error_required_fields">Vui lòng điền đầy đủ các trường bắt buộc</string>
+    <string name="recipe_salad">Salad rau củ với ức gà</string>
+    <string name="recipe_salmon">Cá hồi nướng với măng tây</string>
+    <string name="recipe_eggs">Trứng chiên với bơ</string>
+    <string name="recipe_pork">Sườn heo nướng sốt bơ tỏi</string>
+    <string name="calories">Calo</string>
+    <string name="carbs">Carbohydrate</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Chất béo</string>
+    <string name="add_diet">Thêm chế độ ăn</string>
+    <string name="recycler_view_diets">Danh sách chế độ ăn hiện có</string>
 
+    <string name="name_disease">Tên bệnh</string>
+    <string name="detail">Chi tiết</string>
+    <string name="pick_language">🌐 Chọn ngôn ngữ</string>
+    <string name="nutrition_plan">Chế độ dinh dưỡng</string>
+    <string name="button_nutrion1">Giảm cân</string>
+    <string name="button_nutrion_2">Tăng cơ</string>
+    <string name="button_nutrion_3">Duy trì</string>
+
+    <string name="font_size_info">🔠 Kích thước chữ: 14sp</string>
+    <string name="sound">🔊 Âm thanh</string>
+    <string name="noti">🔔 Thông báo</string>
+    <string name="dark_mode">🌙 Chế độ tối</string>
+    <string name="display_settings">⚙️ Cài đặt hiển thị</string>
 
 </resources>

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chế độ dinh dưỡng"
+        android:text="@string/nutrition_plan"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
@@ -32,7 +32,7 @@
             android:id="@+id/btnDietWeightLoss"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Giảm cân"
+            android:text="@string/button_nutrion1"
             android:textColor="#FFFFFF"
             android:background="#FF5722"
         android:layout_marginBottom="16dp"/>
@@ -42,7 +42,7 @@
             android:id="@+id/btnDietMuscleGain"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Tăng cơ"
+            android:text="@string/button_nutrion_2"
             android:textColor="#FFFFFF"
             android:background="#2196F3"
         android:layout_marginBottom="16dp"/>
@@ -52,7 +52,7 @@
             android:id="@+id/btnDietMaintain"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Duy trì"
+            android:text="@string/button_nutrion_3"
             android:textColor="#FFFFFF"
             android:background="#4CAF50"
         android:layout_marginBottom="16dp"/>

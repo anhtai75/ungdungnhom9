@@ -28,7 +28,7 @@
             android:id="@+id/languageTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🌐 Chọn ngôn ngữ"
+            android:text="@string/pick_language"
             android:textSize="20sp"
             android:textColor="#333333"
             android:fontFamily="sans-serif-medium"
@@ -77,7 +77,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="⚙️ Cài đặt hiển thị"
+            android:text="@string/display_settings"
             android:textSize="20sp"
             android:textColor="#333333"
             android:fontFamily="sans-serif-medium"
@@ -97,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🌙 Chế độ tối"
+                android:text="@string/dark_mode"
                 android:textSize="18sp"
                 android:textColor="#333333" />
 
@@ -130,7 +130,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🔔 Thông báo"
+                android:text="@string/noti"
                 android:textSize="18sp"
                 android:textColor="#333333" />
 
@@ -154,7 +154,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🔊 Âm thanh"
+                android:text="@string/sound"
                 android:textSize="18sp"
                 android:textColor="#333333" />
 
@@ -169,7 +169,7 @@
             android:id="@+id/fontSizeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🔠 Kích thước chữ: 14sp"
+            android:text="@string/font_size_info"
             android:textSize="20sp"
             android:textColor="#333333"
             android:fontFamily="sans-serif-medium"

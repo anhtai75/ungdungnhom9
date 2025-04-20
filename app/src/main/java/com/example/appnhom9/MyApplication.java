@@ -1,9 +1,11 @@
 package com.example.appnhom9;
 
 
+
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
+
 
 public class MyApplication extends Application {
 
@@ -17,9 +19,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
     }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        // Đảm bảo áp dụng lại ngôn ngữ khi cấu hình thay đổi
         LocaleHelper.setLocale(this, LocaleHelper.getLanguage(this));
     }
 }

@@ -1,51 +1,50 @@
 package com.example.appnhom9;
 
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
-import android.preference.PreferenceManager;
 
 import java.util.Locale;
 
 public class LocaleHelper {
+    private static final String PREF_NAME = "AppSettings";
+    private static final String LANGUAGE_KEY = "language";
 
-    private static final String SELECTED_LANGUAGE = "Locale.Helper.Selected.Language";
-
-    // Lấy ngôn ngữ hiện tại
-    public static String getLanguage(Context context) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getString(SELECTED_LANGUAGE, "en"); // Mặc định là tiếng Anh
+    // Lưu ngôn ngữ vào SharedPreferences
+    public static void saveLanguage(Context context, String languageCode) {
+        SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(LANGUAGE_KEY, languageCode);
+        editor.apply();
     }
 
-    // Thay đổi ngôn ngữ
-    public static Context setLocale(Context context, String language) {
-        persist(context, language);
+    // Lấy ngôn ngữ từ SharedPreferences
+    public static String getLanguage(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return prefs.getString(LANGUAGE_KEY, "en"); // "en" là mặc định
+    }
 
-        // Cập nhật resources
-        Resources resources = context.getResources();
-        Configuration configuration = resources.getConfiguration();
-        Locale locale = new Locale(language);
+    // Áp dụng ngôn ngữ vào context và trả về context mới
+    public static Context setLocale(Context context, String languageCode) {
+        // Lưu lại ngôn ngữ vừa thiết lập
+        saveLanguage(context, languageCode);
+
+        Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            configuration.setLocale(locale);
-            return context.createConfigurationContext(configuration);
+        Resources resources = context.getResources();
+        Configuration config = new Configuration(resources.getConfiguration());
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            config.setLocale(locale);
+            return context.createConfigurationContext(config);
         } else {
-            configuration.locale = locale;
-            resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+            config.locale = locale;
+            resources.updateConfiguration(config, resources.getDisplayMetrics());
             return context;
         }
-    }
-
-    // Lưu ngôn ngữ đã chọn
-    private static void persist(Context context, String language) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(SELECTED_LANGUAGE, language);
-        editor.apply();
     }
 }
 
