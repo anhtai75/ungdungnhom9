@@ -26,7 +26,7 @@
 
 
     <string name="nutrition">Dinh dưỡng</string>
-    <string name="search_diets">Tìm kiếm chế độ ăn...</string>
+    <string name="search_diets">Tìm kiếm chế độ ăn</string>
     <string name="recipes">Công thức</string>
     <string name="track_nutrition">Theo dõi dinh dưỡng</string>
     <string name="add_new_diet">Thêm chế độ ăn mới</string>
@@ -85,7 +85,7 @@
     <string name="description_post">Mô tả bài viết</string>
     <string name="content_discription">Danh sách ghi chú</string>
     <string name="search_result">Kết quả tìm kiếm sẽ được hiển thị ở đây</string>
-    <string name="search_hospital">Tìm kiếm bệnh viện...</string>
+    <string name="search_hospital">Tìm kiếm bệnh viện</string>
     <string name="near">Gần nhất</string>
     <string name="big_hospital">Bệnh viện lớn</string>
     <string name="small_hospital">Bệnh viện khác</string>
@@ -97,11 +97,11 @@
     <string name="post_detail">Chi tiết bài viết</string>
     <string name="title_of_post">Tiêu đề bài viết</string>
     <string name="post_description">Mô tả bài viết</string>
-    <string name="content_of_post_here">Nội dung bài viết sẽ hiển thị ở đây...</string>
+    <string name="content_of_post_here">Nội dung bài viết sẽ hiển thị ở đây</string>
     <string name="notificate">Thông báo</string>
-    <string name="health_reminder">Lời nhắc sức khỏe...</string>
-    <string name="searching_post">Tìm kiếm bài viết...</string>
-    <string name="take_note">Nhập ghi chú...</string>
+    <string name="health_reminder">Lời nhắc sức khỏe</string>
+    <string name="searching_post">Tìm kiếm bài viết</string>
+    <string name="take_note">Nhập ghi chú</string>
     <string name="save_note">Lưu ghi chú</string>
     <string name="check_note">Xem danh sách ghi chú</string>
     <string name="post_list">Danh sách bài viết</string>

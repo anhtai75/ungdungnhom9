@@ -22,11 +22,11 @@
         <string name="contact_title">CONTACT</string>
         <string name="emergency_number">Emergency numbers</string>
         <string name="change_language">Change language</string>
-        <string name="search_hospital">Searching for hospital...</string>
+        <string name="search_hospital">Searching for hospital</string>
         <string name="near">Nearest</string>
 
         <string name="nutrition">Nutrition</string>
-        <string name="search_diets">Search diets...</string>
+        <string name="search_diets">Search diets</string>
         <string name="recipes">Recipes</string>
         <string name="track_nutrition">Track Nutrition</string>
         <string name="add_new_diet">Add New Diet</string>
@@ -96,11 +96,11 @@
         <string name="post_detail">Post Details</string>
         <string name="title_of_post">Post Title</string>
         <string name="post_description">Post Description</string>
-        <string name="content_of_post_here">The content of the post will be displayed here...</string>
+        <string name="content_of_post_here">The content of the post will be displayed here</string>
         <string name="notificate">Notification</string>
-        <string name="health_reminder">Health reminder...</string>
-        <string name="searching_post">Search posts...</string>
-        <string name="take_note">Enter note...</string>
+        <string name="health_reminder">Health reminder.</string>
+        <string name="searching_post">Search posts</string>
+        <string name="take_note">Enter note</string>
         <string name="save_note">Save note</string>
         <string name="check_note">View note list</string>
         <string name="post_list">Post list</string>
