@@ -93,6 +93,17 @@
         <string name="list_disease">List of Diseases</string>
         <string name="common_knowledge">BASIC DISEASE KNOWLEDGE</string>
         <string name="health_tips">💡 Daily Health Tips!</string>
+        <string name="post_detail">Post Details</string>
+        <string name="title_of_post">Post Title</string>
+        <string name="post_description">Post Description</string>
+        <string name="content_of_post_here">The content of the post will be displayed here...</string>
+        <string name="notificate">Notification</string>
+        <string name="health_reminder">Health reminder...</string>
+        <string name="searching_post">Search posts...</string>
+        <string name="take_note">Enter note...</string>
+        <string name="save_note">Save note</string>
+        <string name="check_note">View note list</string>
+        <string name="post_list">Post list</string>
 
 
 

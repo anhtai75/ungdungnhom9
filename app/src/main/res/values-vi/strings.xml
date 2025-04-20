@@ -94,5 +94,16 @@
     <string name="list_disease">Danh sách các loại bệnh</string>
     <string name="common_knowledge">KIẾN THỨC BỆNH CƠ BẢN</string>
     <string name="health_tips">💡 Mẹo sức khoẻ mỗi ngày!</string>
+    <string name="post_detail">Chi tiết bài viết</string>
+    <string name="title_of_post">Tiêu đề bài viết</string>
+    <string name="post_description">Mô tả bài viết</string>
+    <string name="content_of_post_here">Nội dung bài viết sẽ hiển thị ở đây...</string>
+    <string name="notificate">Thông báo</string>
+    <string name="health_reminder">Lời nhắc sức khỏe...</string>
+    <string name="searching_post">Tìm kiếm bài viết...</string>
+    <string name="take_note">Nhập ghi chú...</string>
+    <string name="save_note">Lưu ghi chú</string>
+    <string name="check_note">Xem danh sách ghi chú</string>
+    <string name="post_list">Danh sách bài viết</string>
 
 </resources>

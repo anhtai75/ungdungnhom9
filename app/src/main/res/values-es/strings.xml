@@ -95,6 +95,18 @@
     <string name="list_disease">Lista de enfermedades</string>
     <string name="common_knowledge">CONOCIMIENTOS BÁSICOS SOBRE ENFERMEDADES</string>
     <string name="health_tips">💡 ¡Consejos de salud diarios!</string>
+    <string name="post_detail">Detalles de la publicación</string>
+    <string name="title_of_post">Título de la publicación</string>
+    <string name="post_description">Descripción de la publicación</string>
+    <string name="content_of_post_here">El contenido de la publicación se mostrará aquí...</string>
+    <string name="notificate">Notificación</string>
+    <string name="health_reminder">Recordatorio de salud...</string>
+    <string name="searching_post">Buscar publicaciones...</string>
+    <string name="take_note">Escribir nota...</string>
+    <string name="save_note">Guardar nota</string>
+    <string name="check_note">Ver lista de notas</string>
+    <string name="post_list">Lista de publicaciones</string>
+
 
 
 </resources>

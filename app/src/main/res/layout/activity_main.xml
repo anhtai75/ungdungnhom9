@@ -23,7 +23,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_notification"
-                    android:contentDescription="Thông báo"
+                    android:contentDescription="@string/notificate"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
@@ -31,7 +31,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Lời nhắc sức khỏe..."
+                    android:text="@string/health_reminder"
                     android:textSize="16sp"
                     android:padding="12dp"
                     android:textColor="#FFFFFF"
@@ -46,7 +46,7 @@
                 android:id="@+id/searchBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tìm kiếm bài viết..."
+                android:hint="@string/searching_post"
                 android:padding="12dp"
                 android:layout_marginBottom="12dp"
                 android:inputType="text"
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top"
-                    android:hint=" Nhập ghi chú..."
+                    android:hint="@string/take_note"
                     android:inputType="textMultiLine"
                     android:maxLines="4"
                     android:padding="16dp"
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="8dp"
-                        android:text="Lưu ghi chú"
+                        android:text="@string/save_note"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
                         android:background="@drawable/button_background"
@@ -106,7 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:contentDescription="Xem danh sách ghi chú"
+                        android:contentDescription="@string/check_note"
                         android:padding="8dp"
                         android:src="@drawable/ic_notes" />
                 </LinearLayout>
@@ -119,7 +119,7 @@
                 android:layout_height="257dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/recycler_view_background"
-                android:contentDescription="Danh sách bài viết" />
+                android:contentDescription="@string/post_list" />
 
             <!-- FrameLayout để chứa Fragment nếu cần -->
             <FrameLayout
