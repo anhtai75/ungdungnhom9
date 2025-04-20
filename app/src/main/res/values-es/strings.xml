@@ -83,7 +83,8 @@
 
     <string name="post_title">Título</string>
     <string name="description_post">Descripción del artículo</string>
-    <string name="content_discription">Danh sách ghi chú</string>
-    <string name="search_result">Kết quả tìm kiếm sẽ được hiển thị ở đây</string>
+    <string name="content_discription">Lista de notas</string>
+    <string name="search_result">Los resultados de búsqueda se mostrarán aquí</string>
+
 
 </resources>
