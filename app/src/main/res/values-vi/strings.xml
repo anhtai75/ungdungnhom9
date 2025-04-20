@@ -62,6 +62,7 @@
     <string name="recycler_view_diets">Danh sách chế độ ăn hiện có</string>
 
     <string name="name_disease">Tên bệnh</string>
+    <string name="specific_disease">Chi tiết bệnh</string>
     <string name="detail">Chi tiết</string>
     <string name="pick_language">🌐 Chọn ngôn ngữ</string>
     <string name="nutrition_plan">Chế độ dinh dưỡng</string>
@@ -88,5 +89,10 @@
     <string name="near">Gần nhất</string>
     <string name="big_hospital">Bệnh viện lớn</string>
     <string name="small_hospital">Bệnh viện khác</string>
+    <string name="quotes">“Sức khỏe là vốn quý nhất của con người. Hãy trân trọng và chăm sóc nó mỗi ngày.”</string>
+    <string name="knowledge">KIẾN THỨC SƠ CỨU KHẨN CẤP</string>
+    <string name="list_disease">Danh sách các loại bệnh</string>
+    <string name="common_knowledge">KIẾN THỨC BỆNH CƠ BẢN</string>
+    <string name="health_tips">💡 Mẹo sức khoẻ mỗi ngày!</string>
 
 </resources>

@@ -15,7 +15,7 @@
             android:id="@+id/ten_benh_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên bệnh"
+            android:text="@string/name_disease"
             android:textSize="18sp"
             android:textStyle="bold" />
 

@@ -62,6 +62,7 @@
         <string name="recycler_view_diets">List of available diets</string>
 
         <string name="name_disease">Disease Name</string>
+        <string name="specific_disease">Disease Name</string>
         <string name="detail">Details</string>
         <string name="pick_language">🌐 Select language</string>
         <string name="nutrition_plan">Nutrition plan</string>
@@ -74,7 +75,7 @@
         <string name="noti">🔔 Notifications</string>
         <string name="dark_mode">🌙 Dark Mode</string>
         <string name="display_settings">⚙️ Display Settings</string>
-        <string name="come_back">Back</string>
+        <string name="come_back">← Back</string>
         <string name="emergency_contact">Emergency Contact\n</string>
         <string name="police">Police</string>
         <string name="fire">Fire Fighter</string>
@@ -87,6 +88,12 @@
         <string name="search_result">Search results will be displayed here</string>
         <string name="big_hospital">Central hospital</string>
         <string name="small_hospital">Other hospital</string>
+        <string name="quotes">“Health is the most valuable asset of a person. Cherish and take care of it every day.”</string>
+        <string name="knowledge">EMERGENCY FIRST AID KNOWLEDGE</string>
+        <string name="list_disease">List of Diseases</string>
+        <string name="common_knowledge">BASIC DISEASE KNOWLEDGE</string>
+        <string name="health_tips">💡 Daily Health Tips!</string>
+
 
 
 </resources>

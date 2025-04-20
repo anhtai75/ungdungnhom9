@@ -64,6 +64,7 @@
 
 
     <string name="name_disease">Nombre de la enfermedad</string>
+    <string name="specific_disease">detalles de la enfermedad</string>
     <string name="detail">Detalle</string>
     <string name="pick_language">🌐 Seleccionar idioma</string>
     <string name="nutrition_plan">Plan de nutrición</string>
@@ -89,6 +90,11 @@
     <string name="search_result">Los resultados de búsqueda se mostrarán aquí</string>
     <string name="big_hospital">Central hospital</string>
     <string name="small_hospital">Otros hospitales</string>
+    <string name="quotes">“La salud es el activo más valioso de una persona. Valórala y cuídala cada día.”</string>
+    <string name="knowledge">CONOCIMIENTOS DE PRIMEROS AUXILIOS</string>
+    <string name="list_disease">Lista de enfermedades</string>
+    <string name="common_knowledge">CONOCIMIENTOS BÁSICOS SOBRE ENFERMEDADES</string>
+    <string name="health_tips">💡 ¡Consejos de salud diarios!</string>
 
 
 </resources>
