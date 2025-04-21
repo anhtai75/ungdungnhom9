@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
 
+import androidx.annotation.NonNull;
+
 public class MyApplication extends Application {
 
     @Override
@@ -18,7 +20,7 @@ public class MyApplication extends Application {
         super.onCreate();
     }
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         LocaleHelper.setLocale(this, LocaleHelper.getLanguage(this));
     }

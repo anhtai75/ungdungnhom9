@@ -1,5 +1,8 @@
 package com.example.appnhom9;
 
+
+
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -8,8 +11,9 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;  // Thêm import này
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -21,11 +25,15 @@ public class SettingsActivity extends AppCompatActivity {
     private RadioGroup languageGroup;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, LocaleHelper.getLanguage(newBase)));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        // Ánh xạ view
         darkModeSwitch = findViewById(R.id.darkModeSwitch);
         notificationSwitch = findViewById(R.id.notificationSwitch);
         soundSwitch = findViewById(R.id.soundSwitch);
@@ -37,74 +45,68 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
-        // Load trạng thái đã lưu
+        // Load dữ liệu đã lưu
         darkModeSwitch.setChecked(prefs.getBoolean("darkMode", false));
         notificationSwitch.setChecked(prefs.getBoolean("notifications", true));
         soundSwitch.setChecked(prefs.getBoolean("sound", true));
         int savedFontSize = prefs.getInt("fontSize", 14);
         fontSizeSeekBar.setProgress(savedFontSize);
         fontSizeTextView.setText("Font Size: " + savedFontSize);
-
         int savedLanguageId = prefs.getInt("languageId", R.id.vietnameseRadioButton);
         languageGroup.check(savedLanguageId);
 
-        // Kiểm tra và áp dụng chế độ tối khi bắt đầu
+        // Áp dụng dark mode
         if (prefs.getBoolean("darkMode", false)) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
-        // Xử lý sự kiện khi thay đổi trạng thái switch
         darkModeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             editor.putBoolean("darkMode", isChecked).apply();
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            }
+            AppCompatDelegate.setDefaultNightMode(isChecked ?
+                    AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
         });
 
-        notificationSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            editor.putBoolean("notifications", isChecked).apply();
-        });
+        notificationSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> editor.putBoolean("notifications", isChecked).apply());
 
-        soundSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            editor.putBoolean("sound", isChecked).apply();
-        });
+        soundSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> editor.putBoolean("sound", isChecked).apply());
 
         fontSizeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 fontSizeTextView.setText("Font Size: " + progress);
                 editor.putInt("fontSize", progress).apply();
-                recreate(); // ⚠️ Rất quan trọng
+                recreate();
             }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
-        // Ngôn ngữ
         languageGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            editor.putInt("languageId", checkedId).apply();
-            String lang = "";
+            String selectedLanguage = "vi"; // mặc định
+
             if (checkedId == R.id.englishRadioButton) {
-                lang = "en";  // Đặt mã ngôn ngữ cho tiếng Anh
-            } else if (checkedId == R.id.vietnameseRadioButton) {
-                lang = "vi";  // Đặt mã ngôn ngữ cho tiếng Việt
+                selectedLanguage = "en";
             } else if (checkedId == R.id.spanishRadioButton) {
-                lang = "es";  // Đặt mã ngôn ngữ cho tiếng Tây Ban Nha
+                selectedLanguage = "es";
             }
 
-            // Lưu mã ngôn ngữ
-            editor.putString("language", lang).apply();
-            // Cập nhật ngôn ngữ của ứng dụng ngay lập tức
-            LocaleHelper.setLocale(SettingsActivity.this, lang);
-            Toast.makeText(this, "Ngôn ngữ đã thay đổi: " + lang, Toast.LENGTH_SHORT).show();
-            finish();
-            startActivity(getIntent());
-        });
+            editor.putInt("languageId", checkedId).apply();
+            editor.putString("language", selectedLanguage).apply();
 
-        // Nút quay lại
+            LocaleHelper.setLocale(this, selectedLanguage);
+            Toast.makeText(this, "Ngôn ngữ đã thay đổi", Toast.LENGTH_SHORT).show();
+
+            recreate(); // reload lại Activity để áp dụng ngôn ngữ
+        });
         backButton.setOnClickListener(v -> finish());
     }
+
 }
