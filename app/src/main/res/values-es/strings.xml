@@ -26,48 +26,14 @@
     <string name="search_hospital">Buscar un hospital</string>
     <string name="near">Más cercano</string>
 
-    <string name="nutrition">Nutrición</string>
-    <string name="search_diets">Buscar dietas</string>
-    <string name="recipes">Recetas</string>
-    <string name="track_nutrition">Registrar nutrición</string>
-    <string name="add_new_diet">Agregar nueva dieta</string>
-    <string name="diet_name">Nombre de la dieta</string>
-    <string name="enter_diet_name">Ingresa el nombre de la dieta</string>
-    <string name="description">Descripción</string>
-    <string name="enter_description">Ingresa la descripción</string>
-    <string name="allergies">Alergias</string>
-    <string name="gluten">Gluten</string>
-    <string name="dairy">Lácteos</string>
-    <string name="peanuts">Cacahuetes</string>
-    <string name="save">Guardar</string>
-    <string name="cancel">Cancelar</string>
-    <string name="diet_details">Detalles de la dieta</string>
-    <string name="allergies_details">Alergias: %1$s</string>
-    <string name="suggested_recipes">Recetas sugeridas</string>
-    <string name="sample_meal_plan">Plan de comidas de ejemplo</string>
-    <string name="tips">Consejos</string>
-    <string name="favorite">Favorito</string>
-    <string name="unfavorite">Quitar de favoritos</string>
-    <string name="share">Compartir</string>
-    <string name="back">Volver</string>
-    <string name="error_required_fields">Por favor, completa todos los campos obligatorios</string>
-    <string name="recipe_salad">Ensalada de verduras con pechuga de pollo</string>
-    <string name="recipe_salmon">Salmón a la parrilla con espárragos</string>
-    <string name="recipe_eggs">Huevos fritos con aguacate</string>
-    <string name="recipe_pork">Costillas de cerdo a la parrilla con salsa de mantequilla y ajo</string>
-    <string name="calories">Calorías</string>
-    <string name="carbs">Carbohidratos</string>
-    <string name="protein">Proteína</string>
-    <string name="fat">Grasa</string>
-    <string name="add_diet">Agregar dieta</string>
-    <string name="recycler_view_diets">Lista de dietas disponibles</string>
+
 
 
     <string name="name_disease">Nombre de la enfermedad</string>
     <string name="specific_disease">detalles de la enfermedad</string>
     <string name="detail">Detalle</string>
     <string name="pick_language">🌐 Seleccionar idioma</string>
-    <string name="nutrition_plan">Plan de nutrición</string>
+
     <string name="button_nutrion1">Pérdida peso</string>
     <string name="button_nutrion_2">Aumento masa muscular</string>
     <string name="button_nutrion_3">Mantenimiento</string>
@@ -114,5 +80,60 @@
     <string name="ng">CERRAR</string>
     <string name="vi_c_kh_ng_n_n_l_m">Qué no hacer</string>
 
+
+    <!-- Các chuỗi hiện có -->
+    <string name="nutrition_tracking">Seguimiento de nutrición</string>
+    <string name="nutrition_info">Información de nutrición</string>
+    <string name="calories">Calorías</string>
+    <string name="carbs">Carbohidratos</string>
+    <string name="protein">Proteínas</string>
+    <string name="fat">Grasas</string>
+    <string name="nutrition_chart">Gráfico de nutrición</string>
+    <string name="nutrition">Nutrición</string>
+    <string name="nutrition_analysis">Análisis de nutrición</string>
+    <string name="recipes_list">Lista de recetas</string>
+    <string name="add_diet">Agregar dieta</string>
+    <string name="added_diet">Dieta agregada: %s</string>
+    <string name="recipes">Recetas</string>
+    <string name="search">Buscar</string>
+    <string name="search_hint">Buscar dietas...</string>
+    <string name="searching">Buscando: %s</string>
+    <string name="diet_name">Nombre de la dieta</string>
+    <string name="description">Descripción</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="instructions">Instrucciones</string>
+    <string name="add_recipe">Agregar receta</string>
+    <string name="recipe_image">Imagen de la receta</string>
+    <string name="choose_image">Elegir imagen</string>
+    <string name="error_recipe_name">El nombre de la receta no puede estar vacío</string>
+    <string name="added_recipe">¡Receta nueva agregada!</string>
+    <string name="diet_image">Imagen de la dieta</string>
+    <string name="save">Guardar</string>
+    <string name="error_diet_name">El nombre de la dieta no puede estar vacío</string>
+    <string name="error_calories">Valor de calorías no válido</string>
+    <string name="saved_message">Dieta guardada: %s</string>
+    <string name="goal">Objetivo</string>
+    <string name="calories_input">Calorías</string>
+    <string name="start_date">Fecha de inicio</string>
+    <string name="end_date">Fecha de fin</string>
+    <string name="allergies">Alergias</string>
+    <string name="welcome_message">¡Bienvenido a Nutrición!</string>
+    <string name="diets">Dietas</string>
+
+    <!-- Thêm các chuỗi bị thiếu -->
+    <string name="add_new_diet">Agregar nueva dieta</string>
+    <string name="enter_diet_name">Ingresar nombre de la dieta</string>
+    <string name="nutrition_goal">Objetivo de nutrición</string>
+    <string name="calories_goal">Objetivo de calorías</string>
+    <string name="enter_calories">Ingresar calorías</string>
+    <string name="allergy_gluten">Gluten</string>
+    <string name="allergy_dairy">Lácteos</string>
+    <string name="allergy_peanuts">Cacahuetes</string>
+    <string name="allergy_seafood">Mariscos</string>
+    <string name="allergy_soy">Soja</string>
+    <string name="allergy_eggs">Huevos</string>
+    <string name="reset">Restablecer</string>
+    <string name="cancel">Cancelar</string>
+    <string name="recipe_name">Nombre de la receta</string>
 
 </resources>

@@ -1,107 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F8F9FA"
     android:padding="16dp"
-    android:background="#FFFFFF">
+    android:baselineAligned="false">
 
-    <TextView
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_new_diet"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_height="?attr/actionBarSize"
         android:background="#7ED648"
-        android:padding="16dp"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginBottom="16dp"/>
+        android:elevation="4dp"
+        app:title="@string/add_diet"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="?attr/homeAsUpIndicator"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/diet_name"
-        android:textSize="16sp"/>
-
-    <EditText
-        android:id="@+id/editTextDietName"
+    <!-- Trường nhập liệu -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_diet_name"
-        android:background="@android:drawable/editbox_background"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/description"
-        android:textSize="16sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:baselineAligned="false">
 
-    <EditText
-        android:id="@+id/editTextDescription"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:hint="@string/enter_description"
-        android:background="@android:drawable/editbox_background"
-        android:padding="10dp"
-        android:gravity="top"
-        android:layout_marginBottom="16dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/enter_diet_name">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDietName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/allergies"
-        android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/description">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxGluten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gluten"
-        android:layout_marginBottom="8dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/nutrition_goal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxDairy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dairy"
-        android:layout_marginBottom="8dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/enter_calories">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCalories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxPeanuts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/peanuts"
-        android:layout_marginBottom="16dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:baselineAligned="false">
 
+                <TextView
+                    android:id="@+id/textViewStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/start_date"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/textViewEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/end_date"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/allergies">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextAllergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allergies"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:baselineAligned="false">
+
+                <CheckBox
+                    android:id="@+id/checkBoxGluten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_gluten"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxDairy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_dairy"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxPeanuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_peanuts"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxSeafood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_seafood"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxSoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_soy"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxEggs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergy_eggs"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewDiet"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0"
+                android:contentDescription="@string/diet_image"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:id="@+id/buttonChooseImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#7ED648"
+                android:text="@string/choose_image"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Nút Lưu và Đặt lại -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#7ED648"
-        android:padding="8dp">
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FF9800"
+            android:text="@string/reset"
+            android:textColor="#FFFFFF"
+            android:padding="16dp"/>
 
         <Button
             android:id="@+id/buttonSave"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#7ED648"
             android:text="@string/save"
-            android:backgroundTint="#8BC34A"
             android:textColor="#FFFFFF"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/buttonCancel"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/cancel"
-            android:backgroundTint="#FFFFFF"
-            android:textColor="#000000"/>
+            android:padding="16dp"/>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF0000"
+        android:text="@string/cancel"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
 </LinearLayout>

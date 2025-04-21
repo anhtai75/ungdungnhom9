@@ -1,100 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#F4F4F4">
+    android:background="#F8F9FA"
+    android:padding="16dp"
+    android:baselineAligned="false">
 
-    <!-- Tiêu đề -->
-    <TextView
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nutrition_plan"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
-        android:padding="16dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="#7ED648"
-        android:layout_marginBottom="24dp"/>
+        android:elevation="4dp"
+        app:title="@string/nutrition_tracking"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="?attr/homeAsUpIndicator"/>
 
-    <!-- Các nút chế độ dinh dưỡng -->
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinnerLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF">
 
-        <!-- Nút Giảm cân -->
-        <Button
-            android:id="@+id/btnDietWeightLoss"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/button_nutrion1"
-            android:textColor="#FFFFFF"
-            android:background="#FF5722"
-        android:layout_marginBottom="16dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <!-- Nút Tăng cơ -->
-        <Button
-            android:id="@+id/btnDietMuscleGain"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/button_nutrion_2"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
-        android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_info"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp"/>
 
-        <!-- Nút Duy trì -->
-        <Button
-            android:id="@+id/btnDietMaintain"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/button_nutrion_3"
-            android:textColor="#FFFFFF"
-            android:background="#4CAF50"
-        android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/textViewNutritionInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_info"
+                android:textSize="16sp"
+                android:textColor="#616161"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <!-- Nút Low Carb -->
-        <Button
-            android:id="@+id/btnDietLowCarb"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Low Carb"
-            android:textColor="#FFFFFF"
-            android:background="#AFA868"
-        android:layout_marginBottom="16dp"/>
-
-        <!-- Nút Keto -->
-        <Button
-            android:id="@+id/btnDietKeto"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Keto"
-            android:textColor="#FFFFFF"
-            android:background="#9C27B0"
-        android:layout_marginBottom="16dp"/>
-    </LinearLayout>
-
-    <!-- Hiển thị thông tin dinh dưỡng -->
-    <TextView
-        android:id="@+id/textViewNutritionInfo"
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartNutrition"
         android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAddDiet"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="#333333"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"/>
-
-    <!-- Nút quay lại -->
-    <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/come_back"
-        android:textColor="#FFFFFF"
-        android:background="#8BC34A"
-    android:layout_marginTop="24dp"/>
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="#7ED648"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="#FFFFFF"/>
 </LinearLayout>
