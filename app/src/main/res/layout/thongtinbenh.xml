@@ -75,7 +75,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Việc không nên làm:"
+            android:text="@string/vi_c_kh_ng_n_n_l_m"
             android:textStyle="bold"
             android:textSize="16sp"
             android:textColor="#333333"
