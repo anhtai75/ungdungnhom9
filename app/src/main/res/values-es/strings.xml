@@ -107,6 +107,11 @@
     <string name="check_note">Ver lista de notas</string>
     <string name="post_list">Lista de publicaciones</string>
     <string name="tieu_de_emer">CONTACTO - HOSPITAL</string>
+    <string name="tri_u_ch_ng">Síntomas:</string>
+    <string name="vi_c_n_n_l_m">Qué hacer:</string>
+    <string name="th_ng_tin_c_b_n">Información básica</string>
+    <string name="c_ch_x_l">Cómo actuar:</string>
+    <string name="ng">CERRAR</string>
 
 
 

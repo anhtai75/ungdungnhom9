@@ -103,6 +103,11 @@
     <string name="check_note">View note list</string>
     <string name="post_list">Post list</string>
     <string name="tieu_de_emer">CONTACT - HOSPITAL</string>
+    <string name="tri_u_ch_ng">Symptoms:</string>
+    <string name="vi_c_n_n_l_m">What to do:</string>
+    <string name="th_ng_tin_c_b_n">Basic Information</string>
+    <string name="c_ch_x_l">How to handle:</string>
+    <string name="ng">CLOSE</string>
 
 
 
