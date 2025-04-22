@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -38,7 +37,6 @@ public class EmergencyActivity extends BaseActivity {
 
         // Khởi tạo container cho liên hệ tùy chỉnh
         customContactContainer = findViewById(R.id.customContactContainer);
-        Button addContactButton = findViewById(R.id.addContactButton);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
@@ -48,10 +46,6 @@ public class EmergencyActivity extends BaseActivity {
             finish(); // Quay lại màn hình trước (trang chủ)
         });
 
-
-        if (addContactButton != null) {
-            addContactButton.setOnClickListener(v -> showAddContactDialog());
-        }
 
         // Kiểm tra quyền gọi điện thoại
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
@@ -89,9 +83,7 @@ public class EmergencyActivity extends BaseActivity {
                 View child = layout.getChildAt(i);
                 if (i < numbers.length) {
                     final String phone = numbers[i];
-                    child.setOnClickListener(v -> {
-                        makePhoneCall(phone);
-                    });
+                    child.setOnClickListener(v -> makePhoneCall(phone));
                 }
             }
         }

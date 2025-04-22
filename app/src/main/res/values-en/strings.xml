@@ -73,6 +73,9 @@
     <string name="c_ch_x_l">How to handle:</string>
     <string name="ng">CLOSE</string>
     <string name="vi_c_kh_ng_n_n_l_m">What should not do:</string>
+    <string name="luu_ghi_chu">Save note</string>
+    <string name="nhap_ghi_chu">Enter note</string>
+    <string name="tim_kiem_bai_viet">Search for post</string>
 
     <!-- Các chuỗi hiện có -->
     <string name="nutrition_tracking">Nutrition Tracking</string>

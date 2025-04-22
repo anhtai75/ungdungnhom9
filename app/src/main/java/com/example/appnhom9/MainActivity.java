@@ -1,5 +1,8 @@
 package com.example.appnhom9;
 
+import static java.lang.String.*;
+
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,11 +26,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends SettingsActivity {
+public class MainActivity extends BaseActivity {
 
     private EditText searchBar, noteEditText;
     private ImageView notificationIcon, navHome, navProfile, navSettings, viewNotesIcon, navHospital;
-    private TextView summaryTitle, stepCountText, saveButton;
+    private TextView summaryTitle, saveButton;
     private CalendarView calendarView;
     private RecyclerView articleRecyclerView;
 
@@ -57,13 +60,10 @@ public class MainActivity extends SettingsActivity {
         setContentView(R.layout.activity_main);
 
         ImageView dinhduongIcon = findViewById(R.id.dinhduong_icon); // Đảm bảo rằng ID này đúng với ID của ImageView
-        dinhduongIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Mở Activity hoặc Fragment hiển thị dinh dưỡng
-                Intent intent = new Intent(MainActivity.this, dinhduongActivity.class);
-                startActivity(intent);
-            }
+        dinhduongIcon.setOnClickListener(v -> {
+            // Mở Activity hoặc Fragment hiển thị dinh dưỡng
+            Intent intent = new Intent(MainActivity.this, dinhduongActivity.class);
+            startActivity(intent);
         });
         // mở socuu
         ImageView nutritionKnowledgeCard = findViewById(R.id.nav_nutrition_knowledge);
@@ -302,7 +302,7 @@ public class MainActivity extends SettingsActivity {
         }
 
         calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
-            fileName = String.format("%02d_%02d_%04d", dayOfMonth, month + 1, year);
+            fileName = format("%02d_%02d_%04d", dayOfMonth, month + 1, year);
             saveDateToPreferences(year, month, dayOfMonth);
         });
     }
@@ -375,6 +375,8 @@ public class MainActivity extends SettingsActivity {
             }
         }, 10000);
     }
-
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, LocaleHelper.getLanguage(newBase)));
+    }
 }
