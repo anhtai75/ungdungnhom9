@@ -1,8 +1,7 @@
 package com.example.appnhom9;
 
-
-
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,7 +17,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 public class SettingsActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "AppSettings";
-
     private Switch darkModeSwitch, notificationSwitch, soundSwitch;
     private SeekBar fontSizeSeekBar;
     private TextView fontSizeTextView;
@@ -106,7 +104,13 @@ public class SettingsActivity extends AppCompatActivity {
 
             recreate(); // reload lại Activity để áp dụng ngôn ngữ
         });
-        backButton.setOnClickListener(v -> finish());
-    }
 
+
+        backButton.setOnClickListener(v -> {
+
+            Intent intent = new Intent(SettingsActivity.this, EmergencyActivity.class);
+            startActivity(intent);
+            finish(); // Đóng Activity hiện tại sau khi chuyển hướng
+        });
+    }
 }

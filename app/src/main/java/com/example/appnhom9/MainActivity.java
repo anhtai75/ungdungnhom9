@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends SettingsActivity {
+public class MainActivity extends BaseActivity {
 
     private EditText searchBar, noteEditText;
     private ImageView notificationIcon, navHome, navProfile, navSettings, viewNotesIcon, navHospital;

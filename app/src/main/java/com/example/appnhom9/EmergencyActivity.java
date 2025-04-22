@@ -38,7 +38,6 @@ public class EmergencyActivity extends BaseActivity {
 
         // Khởi tạo container cho liên hệ tùy chỉnh
         customContactContainer = findViewById(R.id.customContactContainer);
-        Button addContactButton = findViewById(R.id.addContactButton);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
@@ -48,10 +47,6 @@ public class EmergencyActivity extends BaseActivity {
             finish(); // Quay lại màn hình trước (trang chủ)
         });
 
-
-        if (addContactButton != null) {
-            addContactButton.setOnClickListener(v -> showAddContactDialog());
-        }
 
         // Kiểm tra quyền gọi điện thoại
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
