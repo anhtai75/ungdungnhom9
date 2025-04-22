@@ -1,5 +1,6 @@
 package com.example.appnhom9;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -376,6 +377,8 @@ public class MainActivity extends BaseActivity {
             }
         }, 10000);
     }
-
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, LocaleHelper.getLanguage(newBase)));
+    }
 }
