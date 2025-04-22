@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -84,9 +83,7 @@ public class EmergencyActivity extends BaseActivity {
                 View child = layout.getChildAt(i);
                 if (i < numbers.length) {
                     final String phone = numbers[i];
-                    child.setOnClickListener(v -> {
-                        makePhoneCall(phone);
-                    });
+                    child.setOnClickListener(v -> makePhoneCall(phone));
                 }
             }
         }
