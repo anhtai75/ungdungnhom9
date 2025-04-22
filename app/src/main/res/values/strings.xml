@@ -95,7 +95,7 @@
         <string name="added_diet">Đã thêm chế độ ăn: %s</string>
         <string name="recipes">Công thức</string>
         <string name="search">Tìm kiếm</string>
-        <string name="search_hint">Tìm kiếm chế độ ăn...</string>
+        <string name="search_hint">Tìm kiếm chế độ ăn…</string>
         <string name="searching">Đang tìm kiếm: %s</string>
         <string name="diet_name">Tên chế độ ăn</string>
         <string name="description">Mô tả</string>
