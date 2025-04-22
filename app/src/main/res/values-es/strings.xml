@@ -79,6 +79,9 @@
     <string name="c_ch_x_l">Cómo actuar:</string>
     <string name="ng">CERRAR</string>
     <string name="vi_c_kh_ng_n_n_l_m">Qué no hacer</string>
+    <string name="luu_ghi_chu">Guardar nota</string>
+    <string name="nhap_ghi_chu">Escribir nota</string>
+    <string name="tim_kiem_bai_viet">Buscar publicación</string>
 
 
     <!-- Các chuỗi hiện có -->
@@ -96,7 +99,7 @@
     <string name="added_diet">Dieta agregada: %s</string>
     <string name="recipes">Recetas</string>
     <string name="search">Buscar</string>
-    <string name="search_hint">Buscar dietas...</string>
+    <string name="search_hint">Buscar dietas…</string>
     <string name="searching">Buscando: %s</string>
     <string name="diet_name">Nombre de la dieta</string>
     <string name="description">Descripción</string>

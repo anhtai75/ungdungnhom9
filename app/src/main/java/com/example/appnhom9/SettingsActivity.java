@@ -2,7 +2,9 @@ package com.example.appnhom9;
 
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -20,15 +22,14 @@ public class SettingsActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "AppSettings";
 
     private Switch darkModeSwitch, notificationSwitch, soundSwitch;
-    private SeekBar fontSizeSeekBar;
     private TextView fontSizeTextView;
-    private RadioGroup languageGroup;
 
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(LocaleHelper.setLocale(newBase, LocaleHelper.getLanguage(newBase)));
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +38,9 @@ public class SettingsActivity extends AppCompatActivity {
         darkModeSwitch = findViewById(R.id.darkModeSwitch);
         notificationSwitch = findViewById(R.id.notificationSwitch);
         soundSwitch = findViewById(R.id.soundSwitch);
-        fontSizeSeekBar = findViewById(R.id.fontSizeSeekBar);
+        SeekBar fontSizeSeekBar = findViewById(R.id.fontSizeSeekBar);
         fontSizeTextView = findViewById(R.id.fontSizeTextView);
-        languageGroup = findViewById(R.id.languageGroup);
+        RadioGroup languageGroup = findViewById(R.id.languageGroup);
         Button backButton = findViewById(R.id.backButton);
 
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -104,7 +105,11 @@ public class SettingsActivity extends AppCompatActivity {
             LocaleHelper.setLocale(this, selectedLanguage);
             Toast.makeText(this, "Ngôn ngữ đã thay đổi", Toast.LENGTH_SHORT).show();
 
-            recreate(); // reload lại Activity để áp dụng ngôn ngữ
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+            //Thay bằng Intent để khởi động lại trang chính
         });
         backButton.setOnClickListener(v -> finish());
     }

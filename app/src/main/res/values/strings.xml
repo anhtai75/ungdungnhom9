@@ -25,8 +25,6 @@
         <string name="change_language">Thay đổi ngôn ngữ</string>
 
 
-
-
         <string name="name_disease">Tên bệnh</string>
         <string name="specific_disease">Chi tiết bệnh</string>
         <string name="detail">Chi tiết</string>
@@ -77,7 +75,12 @@
         <string name="c_ch_x_l">Cách xử lý:</string>
         <string name="ng">ĐÓNG</string>
         <string name="vi_c_kh_ng_n_n_l_m">Việc không nên làm:</string>
-        <!-- Các chuỗi hiện có -->
+        <string name="luu_ghi_chu">Lưu ghi chú</string>
+        <string name="nhap_ghi_chu">Nhập ghi chú</string>
+        <string name="tim_kiem_bai_viet">Tìm kiếm bài viết</string>
+
+
+
         <string name="nutrition_tracking">Theo dõi dinh dưỡng</string>
         <string name="nutrition_info">Thông tin dinh dưỡng</string>
         <string name="calories">Calo</string>
@@ -131,4 +134,6 @@
         <string name="reset">Đặt lại</string>
         <string name="cancel">Hủy</string>
         <string name="recipe_name">Tên công thức</string>
+
+
 </resources>
