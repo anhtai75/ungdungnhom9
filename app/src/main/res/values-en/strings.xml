@@ -92,7 +92,7 @@
     <string name="added_diet">Added diet: %s</string>
     <string name="recipes">Recipes</string>
     <string name="search">Search</string>
-    <string name="search_hint">Search diets...</string>
+    <string name="search_hint">Search diets…</string>
     <string name="searching">Searching for: %s</string>
     <string name="diet_name">Diet Name</string>
     <string name="description">Description</string>
