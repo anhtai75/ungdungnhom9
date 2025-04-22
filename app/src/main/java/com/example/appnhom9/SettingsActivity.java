@@ -21,9 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "AppSettings";
 
     private Switch darkModeSwitch, notificationSwitch, soundSwitch;
-    private SeekBar fontSizeSeekBar;
     private TextView fontSizeTextView;
-    private RadioGroup languageGroup;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -38,9 +36,9 @@ public class SettingsActivity extends AppCompatActivity {
         darkModeSwitch = findViewById(R.id.darkModeSwitch);
         notificationSwitch = findViewById(R.id.notificationSwitch);
         soundSwitch = findViewById(R.id.soundSwitch);
-        fontSizeSeekBar = findViewById(R.id.fontSizeSeekBar);
+        SeekBar fontSizeSeekBar = findViewById(R.id.fontSizeSeekBar);
         fontSizeTextView = findViewById(R.id.fontSizeTextView);
-        languageGroup = findViewById(R.id.languageGroup);
+        RadioGroup languageGroup = findViewById(R.id.languageGroup);
         Button backButton = findViewById(R.id.backButton);
 
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
