@@ -5,13 +5,11 @@
 
 ## 🚀 Tính năng
 
-<<<<<<< HEAD
-- [ ] **Đăng nhập/Đăng ký người dùng**
+
 - [ ] **Quản lý dữ liệu cá nhân**
 - [ ] **Tích hợp cơ sở dữ liệu (SQLite hoặc Firebase)**
 =======
 - [ ] **Quản lý dữ liệu cá nhân**
->>>>>>> 0cfda5c50b22636f83797be3f5f35cdbe0938acf
 - [ ] **Giao diện người dùng thân thiện và dễ sử dụng**
 
 > *Lưu ý: Các tính năng cụ thể cần được cập nhật dựa trên tiến độ phát triển của dự án.*
