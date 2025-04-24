@@ -139,4 +139,9 @@
     <string name="cancel">Cancelar</string>
     <string name="recipe_name">Nombre de la receta</string>
 
+
+    <string name="prompt_image">Seleccionar Imagen</string>
+    <string name="save_recipe">Guardar Receta</string>
+    <string name="fill_required_fields">Por favor, completa todos los campos requeridos</string>
+
 </resources>

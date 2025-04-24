@@ -1,5 +1,6 @@
 package com.example.appnhom9;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -26,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_DIET_ID = "id";
     private static final String COLUMN_DIET_NAME = "name";
     private static final String COLUMN_DIET_DESCRIPTION = "description";
-    private static final String COLUMN_DIET_IMAGE = "image"; // Lưu đường dẫn hình ảnh
+    private static final String COLUMN_DIET_IMAGE = "image";
 
     // Bảng Recipe
     private static final String TABLE_RECIPE = "recipe";
@@ -35,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_RECIPE_DESCRIPTION = "description";
     private static final String COLUMN_RECIPE_INGREDIENTS = "ingredients";
     private static final String COLUMN_RECIPE_INSTRUCTIONS = "instructions";
-    private static final String COLUMN_RECIPE_IMAGE = "image"; // Lưu đường dẫn hình ảnh
+    private static final String COLUMN_RECIPE_IMAGE = "image";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -84,24 +85,50 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void insertSampleData(SQLiteDatabase db) {
-        // Dữ liệu mẫu cho Food
-        insertFood(db, "Chicken Breast", 165f, 0f, 31f, 3.6f);
-        insertFood(db, "Avocado", 160f, 15f, 2f, 9f);
-        insertFood(db, "Salmon", 208f, 0f, 20f, 13f);
+        // Dữ liệu mẫu cho Food (Vietnamese ingredients)
+        insertFood(db, "Thịt Gà", 165f, 0f, 31f, 3.6f); // Chicken
+        insertFood(db, "Cá Hồi", 208f, 0f, 20f, 13f); // Salmon
+        insertFood(db, "Thịt Bò", 250f, 0f, 26f, 15f); // Beef
+        insertFood(db, "Tôm", 99f, 0.2f, 24f, 0.3f); // Shrimp
+        insertFood(db, "Gạo Lứt", 111f, 23f, 2.6f, 0.9f); // Brown Rice
+        insertFood(db, "Rau Cải Xanh", 25f, 5f, 2.5f, 0.4f); // Green Leafy Vegetables
+        insertFood(db, "Đậu Phụ", 76f, 1.9f, 8f, 4.8f); // Tofu
+        insertFood(db, "Trứng Gà", 68f, 0.5f, 6f, 5f); // Egg
 
         // Dữ liệu mẫu cho Diet
-        insertDiet(db, "Low-Carb", "Focuses on reducing carbohydrate intake.", "");
-        insertDiet(db, "Keto", "High-fat, low-carb diet to induce ketosis.", "");
-        insertDiet(db, "High-Protein", "Focuses on protein for muscle growth.", "");
-        insertDiet(db, "Vegan", "No animal products.", "");
-        insertDiet(db, "Paleo", "Based on ancestral diet: meat, veggies, fruits.", "");
-        insertDiet(db, "Intermittent Fasting", "Combines fasting with eating windows.", "");
-        insertDiet(db, "Mediterranean", "Focuses on Mediterranean foods: fish, olive oil.", "");
+        insertDiet(db, "Ít Tinh Bột", "Tập trung vào việc giảm lượng carbohydrate.", "diet_low_carb");
+        insertDiet(db, "Keto", "Chế độ ăn giàu chất béo, ít carbohydrate để gây ketosis.", "diet_keto");
+        insertDiet(db, "Giàu Protein", "Tập trung vào protein để phát triển cơ bắp.", "diet_protein");
+        insertDiet(db, "Ăn Chay", "Không sử dụng sản phẩm từ động vật.", "diet_vegan");
+        insertDiet(db, "Paleo", "Dựa trên chế độ ăn của tổ tiên: thịt, rau, trái cây.", "diet_paleo");
+        insertDiet(db, "Nhịn Ăn Gián Đoạn", "Kết hợp nhịn ăn với các khoảng thời gian ăn.", "diet_fasting");
+        insertDiet(db, "Địa Trung Hải", "Tập trung vào thực phẩm Địa Trung Hải: cá, dầu ô liu.", "diet_mediterranean");
 
-        // Dữ liệu mẫu cho Recipe
-        insertRecipe(db, "Grilled Salmon", "Delicious grilled salmon with asparagus.", "Salmon, asparagus, butter", "Grill salmon for 5 minutes each side.", "");
-        insertRecipe(db, "Avocado Salad", "Healthy salad with avocado and walnuts.", "Avocado, walnuts, olive oil", "Mix all ingredients and serve.", "");
-        insertRecipe(db, "Fried Eggs", "Quick and easy fried eggs with bacon.", "Eggs, bacon, cheese", "Fry eggs and bacon, top with cheese.", "");
+        // Dữ liệu mẫu cho Recipe (Vietnamese dishes)
+        insertRecipe(db, "Phở Bò", "Món phở bò thơm ngon với nước dùng đậm đà.",
+                "Thịt bò, bánh phở, hành tây, gừng, quế, hồi, nước mắm",
+                "Nấu nước dùng với xương bò, gừng, quế, hồi trong 6 giờ. Thêm bánh phở và thịt bò thái mỏng, ăn kèm rau thơm.",
+                "pho_bo");
+        insertRecipe(db, "Bún Chả", "Bún chả Hà Nội với thịt nướng thơm lừng.",
+                "Thịt lợn, bún, nước mắm, tỏi, ớt, đu đủ muối",
+                "Nướng thịt lợn trên than hoa, pha nước mắm chua ngọt, ăn kèm bún và rau sống.",
+                "bun_cha");
+        insertRecipe(db, "Gỏi Cuốn Tôm", "Gỏi cuốn tôm tươi ngon, nhẹ nhàng.",
+                "Tôm, bánh tráng, bún, rau xà lách, hẹ, đậu phộng",
+                "Luộc tôm, cuốn với bún, rau, hẹ trong bánh tráng, chấm nước mắm đậu phộng.",
+                "goi_cuon");
+        insertRecipe(db, "Cá Kho Tộ", "Cá kho tộ đậm đà, ăn với cơm nóng.",
+                "Cá lóc, nước mắm, đường, tiêu, hành tím, ớt",
+                "Ướp cá với nước mắm, đường, tiêu, kho trong nồi đất với hành và ớt đến khi sệt.",
+                "ca_kho_to");
+        insertRecipe(db, "Canh Chua Cá Lóc", "Canh chua cá lóc thơm ngon, chua nhẹ.",
+                "Cá lóc, cà chua, dọc mùng, giá đỗ, me, rau mùi",
+                "Nấu nước dùng với me, thêm cá lóc, cà chua, dọc mùng, giá đỗ, nêm gia vị, rắc rau mùi.",
+                "canh_chua");
+        insertRecipe(db, "Chả Giò", "Chả giò giòn rụm, nhân thịt và tôm.",
+                "Thịt lợn, tôm, miến, cà rốt, hành tây, bánh tráng",
+                "Trộn nhân, cuốn trong bánh tráng, chiên vàng giòn, chấm nước mắm.",
+                "cha_gio");
     }
 
     // Các phương thức cho Food
@@ -115,6 +142,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_FOOD, null, values);
     }
 
+    @SuppressLint("Range")
     public ArrayList<Food> getAllFoods() {
         ArrayList<Food> foodList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -144,6 +172,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_DIET, null, values);
     }
 
+    @SuppressLint("Range")
     public ArrayList<Diet> getAllDiets() {
         ArrayList<Diet> dietList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -173,6 +202,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_RECIPE, null, values);
     }
 
+    @SuppressLint("Range")
     public ArrayList<Recipe> getAllRecipes() {
         ArrayList<Recipe> recipeList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

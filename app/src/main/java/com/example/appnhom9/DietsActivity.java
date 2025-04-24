@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DietsActivity extends BaseActivity {
 
@@ -36,7 +37,7 @@ public class DietsActivity extends BaseActivity {
         buttonTrackNutrition = findViewById(R.id.buttonTrackNutrition);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(v -> finish());
 
         dbHelper = new DatabaseHelper(this);

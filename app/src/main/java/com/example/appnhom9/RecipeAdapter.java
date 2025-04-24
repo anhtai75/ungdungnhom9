@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> {
@@ -37,8 +36,16 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         holder.textViewRecipeIngredients.setText(context.getString(R.string.ingredients) + ": " + recipe.getIngredients());
         holder.textViewRecipeInstructions.setText(context.getString(R.string.instructions) + ": " + recipe.getInstructions());
 
+        // Load image from drawable resource
         if (recipe.getImage() != null && !recipe.getImage().isEmpty()) {
-            Glide.with(context).load(recipe.getImage()).into(holder.imageViewRecipe);
+            int resourceId = context.getResources().getIdentifier(recipe.getImage(), "drawable", context.getPackageName());
+            if (resourceId != 0) {
+                holder.imageViewRecipe.setImageResource(resourceId);
+            } else {
+                holder.imageViewRecipe.setImageResource(R.drawable.placeholder_image);
+            }
+        } else {
+            holder.imageViewRecipe.setImageResource(R.drawable.placeholder_image);
         }
 
         holder.itemView.setOnClickListener(v -> {

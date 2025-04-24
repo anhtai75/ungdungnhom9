@@ -135,5 +135,9 @@
         <string name="cancel">Hủy</string>
         <string name="recipe_name">Tên công thức</string>
 
+        <string name="prompt_image">Chọn hình ảnh</string>
+        <string name="save_recipe">Lưu Công Thức</string>
+        <string name="fill_required_fields">Vui lòng điền đầy đủ các trường bắt buộc</string>
+
 
 </resources>
