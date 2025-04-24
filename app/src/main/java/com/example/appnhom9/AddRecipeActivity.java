@@ -1,8 +1,6 @@
 package com.example.appnhom9;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,12 +10,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.textfield.TextInputEditText;
-import java.util.Locale;
 
-public class AddRecipeActivity extends AppCompatActivity {
+public class AddRecipeActivity extends BaseActivity {
 
     private Toolbar toolbar;
     private TextInputEditText editTextRecipeName, editTextDescription, editTextIngredients, editTextInstructions;
@@ -30,7 +26,6 @@ public class AddRecipeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLocale(getCurrentLanguage());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
 
@@ -92,23 +87,5 @@ public class AddRecipeActivity extends AppCompatActivity {
             setResult(RESULT_OK);
             finish();
         }, 1000);
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("language", languageCode);
-        editor.apply();
-    }
-
-    private String getCurrentLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        return prefs.getString("language", "vi");
     }
 }

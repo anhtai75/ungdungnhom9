@@ -2,8 +2,6 @@ package com.example.appnhom9;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.textfield.TextInputEditText;
 import java.text.SimpleDateFormat;
@@ -23,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class AddDietActivity extends AppCompatActivity {
+public class AddDietActivity extends BaseActivity {
 
     private Toolbar toolbar;
     private TextInputEditText editTextDietName, editTextDescription, editTextGoal, editTextCalories, editTextAllergies;
@@ -38,7 +35,6 @@ public class AddDietActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLocale(getCurrentLanguage());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_diet);
 
@@ -141,7 +137,6 @@ public class AddDietActivity extends AppCompatActivity {
             }
         }
 
-        // Thêm các dị ứng từ CheckBox
         if (checkBoxGluten.isChecked()) allergies.add(getString(R.string.allergy_gluten));
         if (checkBoxDairy.isChecked()) allergies.add(getString(R.string.allergy_dairy));
         if (checkBoxPeanuts.isChecked()) allergies.add(getString(R.string.allergy_peanuts));
@@ -185,23 +180,5 @@ public class AddDietActivity extends AppCompatActivity {
         textViewEndDate.setText(getString(R.string.end_date));
         imageViewDiet.setImageDrawable(null);
         imageUri = null;
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("language", languageCode);
-        editor.apply();
-    }
-
-    private String getCurrentLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        return prefs.getString("language", "vi");
     }
 }

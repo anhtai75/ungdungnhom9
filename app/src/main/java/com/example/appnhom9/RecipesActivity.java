@@ -1,19 +1,15 @@
 package com.example.appnhom9;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class RecipesActivity extends AppCompatActivity {
+public class RecipesActivity extends BaseActivity {
 
     private Toolbar toolbar;
     private RecyclerView recyclerViewRecipes;
@@ -23,7 +19,6 @@ public class RecipesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLocale(getCurrentLanguage());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
 
@@ -57,23 +52,5 @@ public class RecipesActivity extends AppCompatActivity {
             recyclerViewRecipes.setAdapter(adapter);
             Toast.makeText(this, getString(R.string.added_recipe), Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("language", languageCode);
-        editor.apply();
-    }
-
-    private String getCurrentLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        return prefs.getString("language", "vi");
     }
 }

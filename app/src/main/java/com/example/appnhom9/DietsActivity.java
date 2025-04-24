@@ -1,22 +1,17 @@
 package com.example.appnhom9;
 
-
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class DietsActivity extends AppCompatActivity {
+public class DietsActivity extends BaseActivity {
 
     private Toolbar toolbar;
     private EditText editTextSearch;
@@ -30,7 +25,6 @@ public class DietsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLocale(getCurrentLanguage());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diets);
 
@@ -48,7 +42,7 @@ public class DietsActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         dietList = dbHelper.getAllDiets();
 
-        adapter = new DietAdapter(dietList);
+        adapter = new DietAdapter(this, dietList);
         recyclerViewDiets.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewDiets.setAdapter(adapter);
 
@@ -61,7 +55,7 @@ public class DietsActivity extends AppCompatActivity {
                     filteredList.add(diet);
                 }
             }
-            adapter = new DietAdapter(filteredList);
+            adapter = new DietAdapter(this, filteredList);
             recyclerViewDiets.setAdapter(adapter);
             Toast.makeText(this, getString(R.string.searching, query), Toast.LENGTH_SHORT).show();
         });
@@ -75,23 +69,5 @@ public class DietsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, TrackNutritionActivity.class);
             startActivity(intent);
         });
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("language", languageCode);
-        editor.apply();
-    }
-
-    private String getCurrentLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        return prefs.getString("language", "vi");
     }
 }

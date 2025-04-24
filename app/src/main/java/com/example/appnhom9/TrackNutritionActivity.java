@@ -1,16 +1,10 @@
 package com.example.appnhom9;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,12 +15,10 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class TrackNutritionActivity extends AppCompatActivity {
+public class TrackNutritionActivity extends BaseActivity {
 
     private Toolbar toolbar;
-    private Spinner spinnerLanguage;
     private TextView textViewNutritionInfo;
     private PieChart pieChartNutrition;
     private RecyclerView recyclerViewRecipes;
@@ -37,12 +29,10 @@ public class TrackNutritionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLocale(getCurrentLanguage());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_nutrition);
 
         toolbar = findViewById(R.id.toolbar);
-        spinnerLanguage = findViewById(R.id.spinnerLanguage);
         textViewNutritionInfo = findViewById(R.id.textViewNutritionInfo);
         pieChartNutrition = findViewById(R.id.pieChartNutrition);
         recyclerViewRecipes = findViewById(R.id.recyclerViewRecipes);
@@ -51,43 +41,6 @@ public class TrackNutritionActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(v -> finish());
-
-        ArrayList<String> languages = new ArrayList<>();
-        languages.add("Tiếng Việt");
-        languages.add("English");
-        languages.add("Español");
-        ArrayAdapter<String> languageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, languages);
-        languageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerLanguage.setAdapter(languageAdapter);
-
-        String currentLang = getCurrentLanguage();
-        if (currentLang.equals("en")) {
-            spinnerLanguage.setSelection(1);
-        } else if (currentLang.equals("es")) {
-            spinnerLanguage.setSelection(2);
-        } else {
-            spinnerLanguage.setSelection(0);
-        }
-
-        spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String newLang;
-                switch (position) {
-                    case 0: newLang = "vi"; break;
-                    case 1: newLang = "en"; break;
-                    case 2: newLang = "es"; break;
-                    default: newLang = "vi";
-                }
-                if (!newLang.equals(getCurrentLanguage())) {
-                    setLocale(newLang);
-                    recreate();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
 
         dbHelper = new DatabaseHelper(this);
         foodList = dbHelper.getAllFoods();
@@ -146,23 +99,5 @@ public class TrackNutritionActivity extends AppCompatActivity {
             String dietName = data.getStringExtra("dietName");
             Toast.makeText(this, getString(R.string.added_diet, dietName), Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("language", languageCode);
-        editor.apply();
-    }
-
-    private String getCurrentLanguage() {
-        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
-        return prefs.getString("language", "vi");
     }
 }

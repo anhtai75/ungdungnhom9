@@ -17,16 +17,9 @@
         android:elevation="4dp"
         app:title="@string/nutrition_tracking"
         app:titleTextColor="#FFFFFF"
-        app:navigationIcon="?attr/homeAsUpIndicator"/>
+        app:navigationIcon="?attr/homeAsUpIndicator" />
 
-    <Spinner
-        android:id="@+id/spinnerLanguage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
-
+    <!-- CardView: Thông tin dinh dưỡng -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +41,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#212121"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/textViewNutritionInfo"
@@ -56,23 +49,26 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nutrition_info"
                 android:textSize="16sp"
-                android:textColor="#616161"/>
+                android:textColor="#616161" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- Biểu đồ dinh dưỡng -->
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChartNutrition"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
 
+    <!-- Danh sách công thức -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewRecipes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
 
+    <!-- Nút thêm chế độ ăn -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttonAddDiet"
         android:layout_width="wrap_content"
@@ -81,5 +77,5 @@
         android:layout_margin="16dp"
         android:backgroundTint="#7ED648"
         android:src="@android:drawable/ic_input_add"
-        app:tint="#FFFFFF"/>
+        app:tint="#FFFFFF" />
 </LinearLayout>
