@@ -1,6 +1,7 @@
 package com.example.appnhom9;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,30 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.DietViewHolder
         holder.textViewDietName.setText(diet.getName());
         holder.textViewDietDescription.setText(diet.getDescription());
 
+        // Log để debug
+        Log.d("DietAdapter", "Loading image: " + diet.getImage());
+
         if (diet.getImage() != null && !diet.getImage().isEmpty()) {
-            Glide.with(context).load(diet.getImage()).into(holder.imageViewDiet);
+            try {
+                // Lấy resource ID từ tên tài nguyên
+                int resourceId = context.getResources().getIdentifier(diet.getImage(), "drawable", context.getPackageName());
+                if (resourceId != 0) {
+                    Glide.with(context)
+                            .load(resourceId)
+                            .placeholder(R.drawable.placeholder_image)
+                            .error(R.drawable.error_image)
+                            .into(holder.imageViewDiet);
+                } else {
+                    Log.e("DietAdapter", "Resource not found: " + diet.getImage());
+                    holder.imageViewDiet.setImageResource(R.drawable.error_image);
+                }
+            } catch (Exception e) {
+                Log.e("DietAdapter", "Error loading image: " + e.getMessage());
+                holder.imageViewDiet.setImageResource(R.drawable.error_image);
+            }
+        } else {
+            Log.w("DietAdapter", "Image is null or empty for diet: " + diet.getName());
+            holder.imageViewDiet.setImageResource(R.drawable.placeholder_image);
         }
 
         holder.itemView.setOnClickListener(v -> {
