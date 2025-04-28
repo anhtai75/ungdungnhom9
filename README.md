@@ -26,10 +26,10 @@ ungdungnhom9/
 ## 📱 Mô tả các màn hình
 📸 Ảnh chụp màn hình
 <p align="center">
-  <img src="screenshots/main_screen.png" width="200" alt="Màn hình chính">
-  <img src="screenshots/nutrition_screen.png" width="200" alt="Màn hình dinh dưỡng">
-  <img src="screenshots/diet_screen.png" width="200" alt="Màn hình chế độ ăn">
-  <img src="screenshots/emergency_screen.png" width="200" alt="Màn hình khẩn cấp">
+  <img src="screenshots/Screenshot 2025-04-28 212929.png" width="200" alt="Màn hình chính">
+  <img src="screenshots/Screenshot 2025-04-28 213016.png" width="200" alt="Màn hình dinh dưỡng">
+  <img src="screenshots/Screenshot 2025-04-28 213026.png" width="200" alt="Màn hình chế độ ăn">
+  <img src="screenshots/Screenshot 2025-04-28 212945.png" width="200" alt="Màn hình khẩn cấp">
 </p>
 ### Màn hình chính và Điều hướng
 
