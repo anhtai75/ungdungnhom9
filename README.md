@@ -7,7 +7,6 @@
 
 
 - [ ] **Quản lý dữ liệu cá nhân**
-- [ ] **Tích hợp cơ sở dữ liệu (SQLite hoặc Firebase)**
 =======
 - [ ] **Quản lý dữ liệu cá nhân**
 - [ ] **Giao diện người dùng thân thiện và dễ sử dụng**
