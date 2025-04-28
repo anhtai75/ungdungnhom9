@@ -1,5 +1,5 @@
 
-# Ứng Dụng Nhóm 9 - Ứng dụng Sức khỏe & Dinh dưỡng
+# Ứng Dụng Nhóm 9 - Ứng dụng Sức khỏe & Dinh dưỡng VitaCare
 
 Đây là một ứng dụng Android được phát triển bởi Nhóm 9 trong khuôn khổ môn học lập trình di động. Dự án sử dụng ngôn ngữ Java và hệ thống build Gradle, tập trung vào quản lý sức khỏe và dinh dưỡng.
 
@@ -24,7 +24,13 @@ ungdungnhom9/
 ```
 
 ## 📱 Mô tả các màn hình
-
+📸 Ảnh chụp màn hình
+<p align="center">
+  <img src="screenshots/main_screen.png" width="200" alt="Màn hình chính">
+  <img src="screenshots/nutrition_screen.png" width="200" alt="Màn hình dinh dưỡng">
+  <img src="screenshots/diet_screen.png" width="200" alt="Màn hình chế độ ăn">
+  <img src="screenshots/emergency_screen.png" width="200" alt="Màn hình khẩn cấp">
+</p>
 ### Màn hình chính và Điều hướng
 
 #### Màn hình Chính (activity_main.xml)
