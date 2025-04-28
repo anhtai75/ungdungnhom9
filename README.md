@@ -33,7 +33,6 @@ ungdungnhom9/
   <img src="screenshots/Screenshot 2025-04-28 212936.png" width="200" alt="Màn hình kiến thức bệnh cơ bản">
   <img src="screenshots/Screenshot 2025-04-28 213007.png" width="200" alt="Màn hình cài đặt">
 </p>
-### Màn hình chính và Điều hướng
 
 #### Màn hình Chính (activity_main.xml)
 - Hiển thị thông báo nhắc nhở sức khỏe
